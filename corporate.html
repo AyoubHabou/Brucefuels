@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Bruce Fuels | Family Heritage Since 1927</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -35,15 +35,16 @@
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #57cc99 100%);
         }
         
-       .premium-card {
-    background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
+        .premium-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
         
         .premium-card:hover {
-    border-color: rgba(87, 204, 153, 0.3);
-}
+            border-color: rgba(87, 204, 153, 0.3);
+            transform: translateY(-2px);
+        }
         
         .glass-effect {
             background: rgba(255, 255, 255, 0.95);
@@ -51,43 +52,43 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
-       .nav-link {
-    position: relative;
-    transition: all 0.2s ease;
-}
+        .nav-link {
+            position: relative;
+            transition: all 0.2s ease;
+        }
         
         .nav-link:hover {
             color: #fcc602;
         }
         
         .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #fcc602;
-    transition: width 0.2s ease;
-}
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #fcc602;
+            transition: width 0.2s ease;
+        }
         
         .nav-link:hover::after {
             width: 100%;
         }
         
         .mobile-menu {
-    transform: translateX(-100%);
-    transition: transform 0.2s ease;
-}
+            transform: translateX(-100%);
+            transition: transform 0.2s ease;
+        }
         
         .mobile-menu.open {
             transform: translateX(0);
         }
         
-      .fade-in-up {
-    opacity: 1;
-    transform: translateY(0);
-}
+        .fade-in-up {
+            opacity: 1;
+            transform: translateY(0);
+        }
         
         .feature-icon {
             background: linear-gradient(135deg, #57cc99, #6dd5a7);
@@ -110,14 +111,11 @@
     
     <header class="glass-effect fixed w-full top-0 z-50 shadow-xl">
         <div class="container mx-auto px-6">
-            <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 feature-icon rounded-xl flex items-center justify-center shadow-lg">
-                        <i class="fas fa-fire text-white text-xl"></i>
-                    </div>
+            <div class="flex justify-between items-center py-3">
+                <div class="flex items-center">
                     <div>
-                        <h1 class="text-2xl font-bold text-forest">Bruce Fuels</h1>
-                        <p class="text-sm text-gray-600">Premium Energy Solutions</p>
+                        <h1 class="text-3xl font-black text-forest tracking-tight">BRUCEFUELS</h1>
+                        <p class="text-sm text-forest font-medium">Get Your Juice From Bruce</p>
                     </div>
                 </div>
 
@@ -165,99 +163,85 @@
         </div>
     </header>
 
-    <section class="pt-32 pb-20 bg-white">
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 bg-white">
         <div class="container mx-auto px-6">
-            <div class="max-w-7xl mx-auto">
-                <div class="grid lg:grid-cols-5 gap-16 items-center">
-                    <div class="lg:col-span-3 fade-in-up">
-                        <div class="inline-flex items-center bg-forest/10 rounded-full px-6 py-3 mb-8">
-                            <i class="fas fa-users text-forest mr-3"></i>
-                            <span class="text-forest font-semibold">Three Generations • Family Owned</span>
-                        </div>
-                        
-                        <h1 class="text-6xl font-bold text-gray-900 mb-8 leading-tight">
-                            From Coal Merchants to 
-                            <span class="text-forest">Energy Leaders</span>
-                        </h1>
-                        
-                        <p class="text-2xl text-gray-600 mb-12 leading-relaxed">
-                            The Bruce Fuels story is one of evolution, dedication, and unwavering commitment to Ottawa's energy needs since 1927.
-                        </p>
-                        
-                        <div class="flex flex-col sm:flex-row gap-6">
-                            <a href="#our-story" class="bg-forest hover:bg-forest-dark text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300">
-                                <i class="fas fa-book-open mr-3"></i>Our Full Story
-                            </a>
-                            <a href="contact.html" class="border-2 border-forest text-forest hover:bg-forest hover:text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300">
-                                <i class="fas fa-handshake mr-3"></i>Partner With Us
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="lg:col-span-2 fade-in-up">
-                        <div class="relative">
-                            <img src="images/reid-mcdonald.jpg" alt="Reid McDonald - Third Generation Owner" class="w-full h-96 object-cover rounded-3xl shadow-2xl">
-                            <div class="absolute -bottom-6 -left-6 bg-gold text-gray-900 px-8 py-4 rounded-2xl font-bold text-xl shadow-xl">
-                                <div class="text-center">
-                                    <div class="text-2xl font-black">3rd</div>
-                                    <div class="text-sm">Generation</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center bg-forest/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-users text-forest mr-2"></i>
+                    <span class="text-forest font-semibold text-sm">Three Generations • Family Owned</span>
+                </div>
+                
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    From Coal Merchants to 
+                    <span class="text-forest">Energy Leaders</span>
+                </h1>
+                
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                    The Bruce Fuels story is one of evolution, dedication, and unwavering commitment to Ottawa's energy needs since 1927.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#our-story" class="bg-forest hover:bg-forest-dark text-white px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-book-open mr-2"></i>Our Story
+                    </a>
+                    <a href="contact.html" class="border-2 border-forest text-forest hover:bg-forest hover:text-white px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-handshake mr-2"></i>Partner With Us
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-gray-50">
+    <!-- Company Values -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-20 fade-in-up">
-                    <h2 class="text-5xl font-bold text-gray-900 mb-6">Our Foundation</h2>
-                    <p class="text-2xl text-gray-600 max-w-4xl mx-auto">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Foundation</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
                         The values that have guided Bruce Fuels through nearly a century of service
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="premium-card rounded-2xl p-8 text-center fade-in-up">
-                        <div class="w-20 h-20 feature-icon rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i class="fas fa-home text-white text-3xl"></i>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-home text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Family Heritage</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Three generations of family ownership ensuring personal service and genuine care for every customer.
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Family Heritage</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Three generations of family ownership ensuring personal service and genuine care.
                         </p>
                     </div>
 
-                    <div class="premium-card rounded-2xl p-8 text-center fade-in-up">
-                        <div class="w-20 h-20 feature-icon-gold rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i class="fas fa-heart text-white text-3xl"></i>
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon-gold rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-heart text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Community First</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Deep Ottawa roots with active support for local organizations and community initiatives.
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Community First</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Deep Ottawa roots with active support for local organizations and initiatives.
                         </p>
                     </div>
 
-                    <div class="premium-card rounded-2xl p-8 text-center fade-in-up">
-                        <div class="w-20 h-20 feature-icon rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i class="fas fa-lightbulb text-white text-3xl"></i>
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-lightbulb text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Innovation</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Embracing technology and modern methods while maintaining traditional service values.
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Innovation</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Embracing technology while maintaining traditional service values.
                         </p>
                     </div>
 
-                    <div class="premium-card rounded-2xl p-8 text-center fade-in-up">
-                        <div class="w-20 h-20 feature-icon-gold rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                            <i class="fas fa-star text-white text-3xl"></i>
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon-gold rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-star text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Unwavering commitment to quality in every product, service, and customer interaction.
+                        <h3 class="text-lg font-bold text-gray-900 mb-3">Excellence</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Unwavering commitment to quality in every product and service.
                         </p>
                     </div>
                 </div>
@@ -265,150 +249,81 @@
         </div>
     </section>
 
-    <section id="our-story" class="py-24 bg-white">
+    <!-- Company Timeline -->
+    <section id="our-story" class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-20 fade-in-up">
-                    <h2 class="text-5xl font-bold text-gray-900 mb-6">Our Journey Through Time</h2>
-                    <p class="text-2xl text-gray-600">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Journey Through Time</h2>
+                    <p class="text-lg text-gray-600">
                         Nearly a century of growth, adaptation, and unwavering service to Ottawa
                     </p>
                 </div>
 
-                <div class="relative">
-                    <div class="absolute left-8 top-0 bottom-0 w-1 timeline-line"></div>
-                    
-                    <div class="space-y-16">
-                        <div class="relative flex items-start fade-in-up">
-                            <div class="timeline-dot w-16 h-16 rounded-full flex items-center justify-center shadow-lg relative z-10">
-                                <span class="text-white font-bold text-lg">1927</span>
-                            </div>
-                            <div class="ml-12 premium-card rounded-2xl p-8 flex-1">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">The Beginning</h3>
-                                <p class="text-gray-600 text-lg leading-relaxed">
-                                    Reg Bruce begins operations as a coal merchant with the solid belief that active community involvement would be rewarded. The foundation of what would become Bruce Fuels is laid in Ottawa's growing landscape.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="relative flex items-start fade-in-up">
-                            <div class="timeline-dot w-16 h-16 rounded-full flex items-center justify-center shadow-lg relative z-10">
-                                <i class="fas fa-expand-alt text-white text-xl"></i>
-                            </div>
-                            <div class="ml-12 premium-card rounded-2xl p-8 flex-1">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Growth & Diversification</h3>
-                                <p class="text-gray-600 text-lg leading-relaxed">
-                                    Reg Bruce's holdings expand to include hotels, restaurants, and construction assets. His dedication to Ottawa is recognized with both a conservation area and residential community bearing his name.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="relative flex items-start fade-in-up">
-                            <div class="timeline-dot w-16 h-16 rounded-full flex items-center justify-center shadow-lg relative z-10">
-                                <i class="fas fa-users text-white text-xl"></i>
-                            </div>
-                            <div class="ml-12 premium-card rounded-2xl p-8 flex-1">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Second Generation Leadership</h3>
-                                <p class="text-gray-600 text-lg leading-relaxed">
-                                    Grant McDonald takes the helm, focusing operations specifically on fuel services as the energy landscape evolves. The company adapts to changing market demands while maintaining its community focus.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="relative flex items-start fade-in-up">
-                            <div class="timeline-dot w-16 h-16 rounded-full flex items-center justify-center shadow-lg relative z-10">
-                                <span class="text-white font-bold text-sm">1990</span>
-                            </div>
-                            <div class="ml-12 premium-card rounded-2xl p-8 flex-1">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Reid McDonald Era Begins</h3>
-                                <p class="text-gray-600 text-lg leading-relaxed">
-                                    Reid McDonald, Reg's grandson, joins the company bringing fresh energy and industry experience from Kemp Fuels. His vision for proper operations and customer service drives the company forward.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="relative flex items-start fade-in-up">
-                            <div class="timeline-dot w-16 h-16 rounded-full flex items-center justify-center shadow-lg relative z-10">
-                                <span class="text-white font-bold text-sm">1993</span>
-                            </div>
-                            <div class="ml-12 premium-card rounded-2xl p-8 flex-1">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Leadership Excellence</h3>
-                                <p class="text-gray-600 text-lg leading-relaxed">
-                                    Reid McDonald becomes General Manager, bringing decades of experience and a commitment to running operations with integrity, efficiency, and customer focus.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="relative flex items-start fade-in-up">
-                            <div class="timeline-dot w-16 h-16 rounded-full flex items-center justify-center shadow-lg relative z-10">
-                                <span class="text-white font-bold text-sm">2025</span>
-                            </div>
-                            <div class="ml-12 premium-card rounded-2xl p-8 flex-1 border-2 border-forest">
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Today & Tomorrow</h3>
-                                <p class="text-gray-600 text-lg leading-relaxed">
-                                    Bruce Fuels continues to evolve with state-of-the-art technology, comprehensive services, and the same family values that started it all. Ready for the next century of service to Ottawa.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16 fade-in-up">
-                    <h2 class="text-5xl font-bold text-gray-900 mb-6">Leadership</h2>
-                    <p class="text-2xl text-gray-600">
-                        Third-generation leadership with deep industry knowledge and community commitment
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
-                    <div class="fade-in-up">
-                        <div class="relative">
-                            <img src="images/reid-mcdonald-professional.jpg" alt="Reid McDonald - General Manager" class="w-full h-96 object-cover rounded-3xl shadow-2xl">
-                            <div class="absolute -top-6 -right-6 bg-forest text-white px-8 py-4 rounded-2xl font-bold text-xl shadow-xl">
-                                <div class="text-center">
-                                    <div class="text-lg">General Manager</div>
-                                    <div class="text-sm opacity-90">Since 1993</div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Timeline Left -->
+                    <div class="space-y-8">
+                        <div class="premium-card rounded-xl p-6 fade-in-up">
+                            <div class="flex items-center mb-4">
+                                <div class="timeline-dot w-12 h-12 rounded-full flex items-center justify-center shadow-lg mr-4">
+                                    <span class="text-white font-bold text-sm">1927</span>
                                 </div>
+                                <h3 class="text-xl font-bold text-gray-900">The Beginning</h3>
                             </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Reg Bruce begins operations as a coal merchant with the solid belief that active community involvement would be rewarded.
+                            </p>
+                        </div>
+
+                        <div class="premium-card rounded-xl p-6 fade-in-up">
+                            <div class="flex items-center mb-4">
+                                <div class="timeline-dot w-12 h-12 rounded-full flex items-center justify-center shadow-lg mr-4">
+                                    <i class="fas fa-users text-white text-lg"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Second Generation</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Grant McDonald takes the helm, focusing operations specifically on fuel services as the energy landscape evolves.
+                            </p>
+                        </div>
+
+                        <div class="premium-card rounded-xl p-6 fade-in-up border-2 border-forest">
+                            <div class="flex items-center mb-4">
+                                <div class="timeline-dot w-12 h-12 rounded-full flex items-center justify-center shadow-lg mr-4">
+                                    <span class="text-white font-bold text-sm">2025</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Today & Tomorrow</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Bruce Fuels continues to evolve with state-of-the-art technology and the same family values that started it all.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="fade-in-up">
-                        <h3 class="text-4xl font-bold text-gray-900 mb-6">Reid McDonald</h3>
-                        <p class="text-xl text-forest font-semibold mb-8">General Manager & Third Generation Owner</p>
-                        
-                        <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
-                            <p>
-                                Reid McDonald represents the third generation of Bruce family leadership in Ottawa's energy sector. As Reg Bruce's grandson, Reid brings both family heritage and extensive industry expertise to his role as General Manager.
-                            </p>
-                            <p>
-                                Having been involved in the fuel industry for most of his adult life, Reid gained valuable operational experience at Kemp Fuels before returning to Bruce Fuels in 1990. This external experience provided him with fresh perspectives and industry best practices.
-                            </p>
-                            <p>
-                                Since becoming General Manager in 1993, Reid has successfully managed the company's evolution while maintaining the family values and community commitment that define Bruce Fuels. His leadership has guided the company through changing energy landscapes and technological advances.
+                    <!-- Timeline Right -->
+                    <div class="space-y-8">
+                        <div class="premium-card rounded-xl p-6 fade-in-up">
+                            <div class="flex items-center mb-4">
+                                <div class="timeline-dot w-12 h-12 rounded-full flex items-center justify-center shadow-lg mr-4">
+                                    <i class="fas fa-expand-alt text-white text-lg"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Growth & Expansion</h3>
+                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Reg Bruce's holdings expand to include hotels, restaurants, and construction assets. His dedication to Ottawa is recognized.
                             </p>
                         </div>
 
-                        <div class="mt-12 grid grid-cols-2 gap-8">
-                            <div class="text-center">
-                                <div class="w-16 h-16 feature-icon rounded-2xl flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-calendar text-white text-2xl"></i>
+                        <div class="premium-card rounded-xl p-6 fade-in-up">
+                            <div class="flex items-center mb-4">
+                                <div class="timeline-dot w-12 h-12 rounded-full flex items-center justify-center shadow-lg mr-4">
+                                    <span class="text-white font-bold text-sm">1990+</span>
                                 </div>
-                                <div class="text-2xl font-bold text-gray-900">32+</div>
-                                <div class="text-gray-600">Years with Company</div>
+                                <h3 class="text-xl font-bold text-gray-900">Modern Leadership</h3>
                             </div>
-                            <div class="text-center">
-                                <div class="w-16 h-16 feature-icon-gold rounded-2xl flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-award text-white text-2xl"></i>
-                                </div>
-                                <div class="text-2xl font-bold text-gray-900">3rd</div>
-                                <div class="text-gray-600">Generation Leader</div>
-                            </div>
+                            <p class="text-gray-600 leading-relaxed">
+                                Third-generation leadership brings fresh energy and industry experience, driving the company forward with modern technology.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -416,70 +331,71 @@
         </div>
     </section>
 
-    <section class="py-24 bg-white">
+    <!-- Mission & Commitment -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16 fade-in-up">
-                    <h2 class="text-5xl font-bold text-gray-900 mb-6">Our Mission</h2>
-                    <p class="text-2xl text-gray-600">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+                    <p class="text-lg text-gray-600">
                         Keeping your family and business environments comfortable and safe
                     </p>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-16">
+                <div class="grid lg:grid-cols-2 gap-12">
                     <div class="fade-in-up">
-                        <div class="premium-card rounded-3xl p-12">
-                            <div class="w-20 h-20 feature-icon rounded-2xl flex items-center justify-center mb-8 shadow-lg">
-                                <i class="fas fa-shield-alt text-white text-3xl"></i>
+                        <div class="premium-card rounded-2xl p-8">
+                            <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h3>
-                            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                            <p class="text-gray-600 leading-relaxed mb-6">
                                 At Bruce Fuels, our first and foremost responsibility is to keep your family and business environments comfortable and safe. The comfort comes from ensuring you have the fuel you need. The safety comes from both service excellence and our ongoing commitment to keeping our staff trained in the most current technology.
                             </p>
-                            <p class="text-lg text-gray-600 leading-relaxed">
+                            <p class="text-gray-600 leading-relaxed">
                                 From this belief stems our guarantee of providing the best products and service available. We are committed to being available and accountable 24 hours a day, 7 days a week.
                             </p>
                         </div>
                     </div>
 
-                    <div class="space-y-8 fade-in-up">
-                        <div class="flex items-start space-x-6">
-                            <div class="w-16 h-16 feature-icon-gold rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                <i class="fas fa-heart text-white text-2xl"></i>
+                    <div class="space-y-6 fade-in-up">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 feature-icon-gold rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <i class="fas fa-heart text-white text-lg"></i>
                             </div>
                             <div>
-                                <h4 class="text-2xl font-bold text-gray-900 mb-3">Safety First</h4>
-                                <p class="text-gray-600 text-lg">Ensuring your family and business environments remain comfortable and safe through reliable fuel supply and expert service.</p>
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Safety First</h4>
+                                <p class="text-gray-600">Ensuring your family and business environments remain comfortable and safe through reliable fuel supply and expert service.</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-6">
-                            <div class="w-16 h-16 feature-icon rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                <i class="fas fa-star text-white text-2xl"></i>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 feature-icon rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <i class="fas fa-star text-white text-lg"></i>
                             </div>
                             <div>
-                                <h4 class="text-2xl font-bold text-gray-900 mb-3">Best Products & Service</h4>
-                                <p class="text-gray-600 text-lg">Committed to providing the highest quality products and service available in the industry.</p>
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Best Products & Service</h4>
+                                <p class="text-gray-600">Committed to providing the highest quality products and service available in the industry.</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-6">
-                            <div class="w-16 h-16 feature-icon-gold rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                <i class="fas fa-clock text-white text-2xl"></i>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 feature-icon-gold rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <i class="fas fa-clock text-white text-lg"></i>
                             </div>
                             <div>
-                                <h4 class="text-2xl font-bold text-gray-900 mb-3">24/7 Accountability</h4>
-                                <p class="text-gray-600 text-lg">Available and accountable around the clock to make our mission a reality for every customer.</p>
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">24/7 Accountability</h4>
+                                <p class="text-gray-600">Available and accountable around the clock to make our mission a reality for every customer.</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-6">
-                            <div class="w-16 h-16 feature-icon rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                                <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 feature-icon rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                                <i class="fas fa-graduation-cap text-white text-lg"></i>
                             </div>
                             <div>
-                                <h4 class="text-2xl font-bold text-gray-900 mb-3">Continuous Training</h4>
-                                <p class="text-gray-600 text-lg">Ongoing commitment to keeping our staff trained in the most current technology and safety practices.</p>
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Continuous Training</h4>
+                                <p class="text-gray-600">Ongoing commitment to keeping our staff trained in the most current technology and safety practices.</p>
                             </div>
                         </div>
                     </div>
@@ -488,53 +404,28 @@
         </div>
     </section>
 
-    <section class="py-24 bg-gray-50">
+    <!-- Community Involvement -->
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16 fade-in-up">
-                    <h2 class="text-5xl font-bold text-gray-900 mb-6">Community Involvement</h2>
-                    <p class="text-2xl text-gray-600">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Community Involvement</h2>
+                    <p class="text-lg text-gray-600">
                         Supporting our community at the grassroots level for nearly a century
                     </p>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <div class="fade-in-up">
-                        <h3 class="text-4xl font-bold text-gray-900 mb-8">Our Community Commitment</h3>
-                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Community Commitment</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
                             At Bruce Fuels, we have taken it upon ourselves to support our community at the grassroots level. We choose to help those in the community who may fall through the cracks of larger organizations.
                         </p>
-                        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                            Bruce Fuels has taken the lead in supporting both recreational and instructional groups through financial and logistical support. Our commitment extends beyond fuel delivery to genuine community partnership.
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Bruce Fuels has taken the lead in supporting both recreational and instructional groups through financial and logistical support.
                         </p>
 
-                        <div class="space-y-4 mb-8">
-                            <h4 class="text-2xl font-bold text-gray-900 mb-6">Organizations We Support:</h4>
-                            <div class="grid grid-cols-1 gap-3">
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-check-circle text-forest text-xl"></i>
-                                    <span class="text-gray-700 text-lg">The West End Softball League</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-check-circle text-forest text-xl"></i>
-                                    <span class="text-gray-700 text-lg">Motorsports Enthusiasts</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-check-circle text-forest text-xl"></i>
-                                    <span class="text-gray-700 text-lg">ORSA Soccer League</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-check-circle text-forest text-xl"></i>
-                                    <span class="text-gray-700 text-lg">Rideau Wood Addiction and Family Services</span>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <i class="fas fa-check-circle text-forest text-xl"></i>
-                                    <span class="text-gray-700 text-lg">Osgoode Township Historical Society</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="premium-card rounded-2xl p-6 border-l-4 border-gold">
+                        <div class="premium-card rounded-xl p-6 border-l-4 border-gold">
                             <p class="text-lg text-gray-600 italic">
                                 "The motorcycle pictured is driven by ambition, and <strong class="text-gold">Powered by Bruce Fuels</strong>."
                             </p>
@@ -542,12 +433,28 @@
                     </div>
                     
                     <div class="fade-in-up">
-                        <div class="relative">
-                            <img src="images/bruce-community-support.jpg" alt="Bruce Fuels Community Support" class="w-full h-96 object-cover rounded-3xl shadow-2xl">
-                            <div class="absolute -bottom-6 -right-6 bg-gold text-gray-900 px-8 py-4 rounded-2xl font-bold text-xl shadow-xl">
-                                <div class="text-center">
-                                    <div class="text-lg">Community</div>
-                                    <div class="text-sm">Partners</div>
+                        <div class="premium-card rounded-xl p-6">
+                            <h4 class="text-xl font-bold text-gray-900 mb-6">Organizations We Support:</h4>
+                            <div class="grid grid-cols-1 gap-3">
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-forest text-lg"></i>
+                                    <span class="text-gray-700">The West End Softball League</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-forest text-lg"></i>
+                                    <span class="text-gray-700">Motorsports Enthusiasts</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-forest text-lg"></i>
+                                    <span class="text-gray-700">ORSA Soccer League</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-forest text-lg"></i>
+                                    <span class="text-gray-700">Rideau Wood Addiction and Family Services</span>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <i class="fas fa-check-circle text-forest text-lg"></i>
+                                    <span class="text-gray-700">Osgoode Township Historical Society</span>
                                 </div>
                             </div>
                         </div>
@@ -557,82 +464,78 @@
         </div>
     </section>
 
-    <section class="py-24 hero-gradient text-white">
+    <!-- Call to Action -->
+    <section class="py-16 hero-gradient text-white">
         <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center fade-in-up">
-                <h2 class="text-5xl font-bold mb-8">Ready to Be Part of Our Story?</h2>
-                <p class="text-2xl text-green-100 mb-12 leading-relaxed">
-                    Join thousands of satisfied customers who have trusted Bruce Fuels for their energy needs. Experience the difference that nearly a century of expertise and family values make.
+            <div class="max-w-3xl mx-auto text-center fade-in-up">
+                <h2 class="text-3xl font-bold mb-6">Ready to Be Part of Our Story?</h2>
+                <p class="text-lg text-green-100 mb-8 leading-relaxed">
+                    Join thousands of satisfied customers who have trusted Bruce Fuels for their energy needs. Experience the difference that nearly a century of expertise makes.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a href="tel:613-225-6500" class="bg-gold hover:bg-gold-dark text-gray-900 px-12 py-5 rounded-xl font-bold text-xl shadow-2xl transform hover:scale-105 transition-all duration-300">
-                        <i class="fas fa-phone mr-3"></i>Call 613-225-6500
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:613-225-6500" class="bg-gold hover:bg-gold-dark text-gray-900 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>Call 613-225-6500
                     </a>
-                    <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-12 py-5 rounded-xl font-bold text-xl transition-all duration-300">
-                        <i class="fas fa-handshake mr-3"></i>Get Started Today
+                    <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-handshake mr-2"></i>Get Started Today
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-20">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="lg:col-span-2">
-                    <div class="flex items-center space-x-3 mb-8">
-                        <div class="w-12 h-12 feature-icon rounded-xl flex items-center justify-center">
-                            <i class="fas fa-fire text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold">Bruce Fuels</h3>
-                            <p class="text-gray-400">Premium Energy Solutions</p>
-                        </div>
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-black text-forest tracking-tight">BRUCEFUELS</h3>
+                        <p class="text-gray-400">Get Your Juice From Bruce</p>
                     </div>
-                    <p class="text-gray-300 mb-8 max-w-md text-lg leading-relaxed">
-                        Family owned since 1927, delivering premium fuel and energy solutions to Ottawa and surrounding areas. Get your juice from Bruce!
+                    <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
+                        Family owned since 1927, delivering premium fuel and energy solutions to Ottawa and surrounding areas.
                     </p>
-                    <div class="space-y-3">
+                    <div class="space-y-2">
                         <p class="flex items-center text-gray-300">
-                            <i class="fas fa-map-marker-alt mr-4 text-gold"></i>
+                            <i class="fas fa-map-marker-alt mr-3 text-gold"></i>
                             2680 Overton Dr., Ottawa, ON K1G 6T8
                         </p>
                         <p class="flex items-center text-gray-300">
-                            <i class="fas fa-phone mr-4 text-gold"></i>
+                            <i class="fas fa-phone mr-3 text-gold"></i>
                             613-225-6500
                         </p>
                         <p class="flex items-center text-gray-300">
-                            <i class="fas fa-envelope mr-4 text-gold"></i>
+                            <i class="fas fa-envelope mr-3 text-gold"></i>
                             reidmcdonald@brucefuels.com
                         </p>
                     </div>
                 </div>
 
                 <div>
-                    <h4 class="text-xl font-semibold mb-8">Quick Links</h4>
-                    <ul class="space-y-4">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors text-lg">Home</a></li>
-                        <li><a href="corporate.html" class="text-gray-300 hover:text-white transition-colors text-lg">About Us</a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors text-lg">Services</a></li>
-                        <li><a href="products.html" class="text-gray-300 hover:text-white transition-colors text-lg">Products</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors text-lg">Contact</a></li>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="corporate.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="products.html" class="text-gray-300 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-xl font-semibold mb-8">Our Story</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#our-story" class="text-gray-300 hover:text-forest transition-colors text-lg">Our History</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors text-lg">Leadership</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors text-lg">Our Mission</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors text-lg">Community</a></li>
-                        <li><a href="#" class="text-gold hover:text-gold-light transition-colors text-lg font-semibold">Family Legacy</a></li>
+                    <h4 class="text-lg font-semibold mb-6">Our Story</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#our-story" class="text-gray-300 hover:text-forest transition-colors">Our History</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors">Our Mission</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors">Community</a></li>
+                        <li><a href="#" class="text-gold hover:text-gold-light transition-colors font-semibold">Family Legacy</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 mt-16 pt-8 text-center">
-                <p class="text-gray-400 text-lg">
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
                     © 2025 Bruce Fuels Ltd. All rights reserved. | Three generations of family service | 
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
                     <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
@@ -673,10 +576,6 @@
                 }
             });
         });
-
-      
-
-       
     </script>
 </body>
 </html>
