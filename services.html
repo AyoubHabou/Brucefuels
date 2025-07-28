@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Bruce Fuels | Premium Heating & Energy Equipment</title>
+    <title>Services - Bruce Fuels | Complete Energy Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -30,26 +30,38 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        
         .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #57cc99 50%, #6dd5a7 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #57cc99 100%);
         }
+        
         .premium-card {
             background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
             border: 1px solid rgba(226, 232, 240, 0.8);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
         .premium-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             border-color: rgba(87, 204, 153, 0.3);
         }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
         .nav-link {
             position: relative;
             transition: all 0.2s ease;
         }
+        
         .nav-link:hover {
             color: #fcc602;
         }
+        
         .nav-link::after {
             content: '';
             position: absolute;
@@ -60,74 +72,76 @@
             background-color: #fcc602;
             transition: width 0.2s ease;
         }
+        
         .nav-link:hover::after {
             width: 100%;
         }
+        
         .mobile-menu {
             transform: translateX(-100%);
             transition: transform 0.2s ease;
         }
+        
         .mobile-menu.open {
             transform: translateX(0);
         }
+        
         .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.4s ease;
         }
+        
         .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
+        
         .feature-icon {
             background: linear-gradient(135deg, #57cc99, #6dd5a7);
         }
+        
         .feature-icon-gold {
             background: linear-gradient(135deg, #fcc602, #fdd835);
         }
-        .premium-glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        
+        .feature-icon-red {
+            background: linear-gradient(135deg, #ef4444, #f87171);
         }
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Header Navigation -->
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
+    
+    <header class="glass-effect fixed w-full top-0 z-50 shadow-xl">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-3">
-                <!-- Logo -->
                 <div class="flex items-center">
                     <div>
                         <h1 class="text-3xl font-black text-forest tracking-tight">BRUCEFUELS</h1>
-                        <p class="text-sm text-forest font-medium">Get Your Juice From Bruce</p>
+                        <p class="text-sm text-black font-medium">Get Your Juice From Bruce</p>
                     </div>
                 </div>
 
-                <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-gold font-medium">Home</a>
-                    <a href="corporate.html" class="nav-link text-gray-700 hover:text-gold font-medium">About Us</a>
-                    <a href="services.html" class="nav-link text-gray-700 hover:text-gold font-medium">Services</a>
-                    <a href="products.html" class="nav-link text-gold font-medium">Products</a>
-                    <a href="contact.html" class="nav-link text-gray-700 hover:text-gold font-medium">Contact</a>
+                    <a href="index.html" class="nav-link text-gray-700 font-medium">Home</a>
+                    <a href="corporate.html" class="nav-link text-gray-700 font-medium">About Us</a>
+                    <a href="services.html" class="nav-link text-gold font-medium">Services</a>
+                    <a href="products.html" class="nav-link text-gray-700 font-medium">Products</a>
+                    <a href="contact.html" class="nav-link text-gray-700 font-medium">Contact</a>
                 </nav>
 
-                <!-- Contact Info & Mobile Menu Button -->
                 <div class="flex items-center space-x-4">
                     <div class="hidden md:block text-right">
                         <p class="text-sm text-gray-600">Get Your Juice From Bruce!</p>
                         <p class="text-lg font-semibold text-forest">613-225-6500</p>
                     </div>
-                    <button id="mobile-menu-btn" class="lg:hidden text-forest hover:text-gold">
+                    <button id="mobile-menu-btn" class="lg:hidden text-forest hover:text-gold transition-colors">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 left-0 w-64 bg-white shadow-2xl z-50">
             <div class="p-6">
                 <div class="flex justify-between items-center mb-8">
@@ -137,13 +151,13 @@
                     </button>
                 </div>
                 <nav class="space-y-4">
-                    <a href="index.html" class="block py-2 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Home</a>
-                    <a href="corporate.html" class="block py-2 text-gray-700 hover:text-forest font-medium border-b border-gray-100">About Us</a>
-                    <a href="services.html" class="block py-2 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Services</a>
-                    <a href="products.html" class="block py-2 text-gold font-medium border-b border-gray-100">Products</a>
-                    <a href="contact.html" class="block py-2 text-gray-700 hover:text-forest font-medium">Contact</a>
+                    <a href="index.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Home</a>
+                    <a href="corporate.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">About Us</a>
+                    <a href="services.html" class="block py-3 text-gold font-medium border-b border-gray-100">Services</a>
+                    <a href="products.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Products</a>
+                    <a href="contact.html" class="block py-3 text-gray-700 hover:text-forest font-medium">Contact</a>
                 </nav>
-                <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+                <div class="mt-8 p-4 bg-gray-50 rounded-xl">
                     <p class="text-sm text-gray-600 mb-2">Get Your Juice From Bruce!</p>
                     <p class="font-semibold text-forest">613-225-6500</p>
                     <p class="text-sm text-gray-600">reidmcdonald@brucefuels.com</p>
@@ -153,222 +167,159 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white pt-24 pb-12">
+    <section class="pt-24 pb-12 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6">
-                    Premium Energy Equipment
+                <div class="inline-flex items-center bg-forest/10 rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-tools text-forest mr-2"></i>
+                    <span class="text-forest font-semibold text-sm">Complete Solutions • Expert Service</span>
+                </div>
+                
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Professional 
+                    <span class="text-forest">Energy Services</span>
                 </h1>
-                <p class="text-lg text-green-100 mb-8 leading-relaxed">
-                    From heating systems to lubricants, Bruce Fuels offers only the best quality products. We use state-of-the-art systems to stay ahead of price fluctuations and pass those savings to you.
+                
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
+                    Bruce Fuels provides excellent customer service to match any situation. Both day-to-day and emergency services are the backbone of our ongoing effort to make your life better.
                 </p>
+                
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contact.html" class="premium-glass text-forest px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-all duration-300">
-                        <i class="fas fa-shopping-cart mr-2"></i>Get Product Quote
+                    <a href="contact.html" class="bg-forest hover:bg-forest-dark text-white px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-quote-left mr-2"></i>Get Service Quote
                     </a>
-                    <a href="tel:613-225-6500" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-forest transition-all duration-300">
-                        <i class="fas fa-phone mr-2"></i>Call Expert
+                    <a href="tel:613-225-6500" class="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>Emergency Service
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Categories Grid -->
-    <section class="py-16 bg-white">
+    <!-- Services Grid -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
                 <div class="text-center mb-12 fade-in-up">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Product Categories</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Complete Services</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Premium equipment from trusted manufacturers - everything you need for complete energy solutions.
+                        From fuel delivery to equipment service - everything you need for your energy requirements.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Furnaces -->
+                    <!-- Oil Delivery -->
                     <div class="premium-card rounded-xl p-6 fade-in-up">
-                        <div class="h-48 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6">
-                            <div class="text-center text-white">
-                                <i class="fas fa-fire text-5xl mb-3"></i>
-                                <p class="text-lg font-semibold">Furnaces & Boilers</p>
-                            </div>
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-truck text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Heating Systems</h3>
-                        <p class="text-gray-600 mb-4">
-                            High-efficiency furnaces and boilers from trusted brands like Brock Engineering and Clare.
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Smart Oil Delivery</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Advanced computer tracking systems monitor your usage and schedule automatic deliveries. Never run out of fuel again.
                         </p>
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Brock Engineering furnaces</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Clare furnaces & boilers (up to 87% efficiency)</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Dovre oil stoves (up to 85% efficiency)</span>
-                            </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>State-of-the-art tracking</li>
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Degree day monitoring</li>
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Automatic delivery</li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center text-forest font-semibold hover:text-forest-dark transition-colors">
+                            Get Started <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Equipment Service -->
+                    <div class="premium-card rounded-xl p-6 fade-in-up">
+                        <div class="w-16 h-16 feature-icon-gold rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-tools text-white text-2xl"></i>
                         </div>
-                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Equipment Service</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Professional maintenance extends equipment life by 20-30%. Complete service for all heating and cooling systems.
+                        </p>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-gold mr-2"></i>All makes and models</li>
+                            <li class="flex items-center"><i class="fas fa-check text-gold mr-2"></i>Preventive maintenance</li>
+                            <li class="flex items-center"><i class="fas fa-check text-gold mr-2"></i>Service contracts available</li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center text-gold font-semibold hover:text-gold-dark transition-colors">
+                            Schedule Service <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Emergency Service -->
+                    <div class="premium-card rounded-xl p-6 border-2 border-red-500 fade-in-up">
+                        <div class="w-16 h-16 feature-icon-red rounded-xl flex items-center justify-center mb-6 shadow-lg relative">
+                            <i class="fas fa-phone-alt text-white text-2xl"></i>
+                            <div class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">24/7</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">24/7 Emergency</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Heating emergencies don't wait for business hours. Our expert team is available around the clock.
+                        </p>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-red-500 mr-2"></i>Emergency fuel delivery</li>
+                            <li class="flex items-center"><i class="fas fa-check text-red-500 mr-2"></i>Furnace repairs</li>
+                            <li class="flex items-center"><i class="fas fa-check text-red-500 mr-2"></i>Quick response time</li>
+                        </ul>
+                        <a href="tel:613-225-6500" class="inline-flex items-center bg-red-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                            Call Emergency <i class="fas fa-phone ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Installation -->
+                    <div class="premium-card rounded-xl p-6 fade-in-up">
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-wrench text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Installation</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Professional installation of heating, cooling, and water heating equipment. Complete system setup and commissioning.
+                        </p>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Heating systems</li>
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Air conditioning</li>
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Complete setup</li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center text-forest font-semibold hover:text-forest-dark transition-colors">
                             Get Quote <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
 
-                    <!-- Water Heaters -->
+                    <!-- Tank Rental -->
                     <div class="premium-card rounded-xl p-6 fade-in-up">
-                        <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                            <div class="text-center text-white">
-                                <i class="fas fa-tint text-5xl mb-3"></i>
-                                <p class="text-lg font-semibold">Water Heaters</p>
-                            </div>
+                        <div class="w-16 h-16 feature-icon-gold rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-gas-pump text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Hot Water Systems</h3>
-                        <p class="text-gray-600 mb-4">
-                            Aero high-efficiency oil-fired water heaters with exceptional recovery rates.
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Tank Rental</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Fuel supply solutions for remote locations, marinas, and industrial sites. Flexible rental options available.
                         </p>
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>32-70 gallon capacity options</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Recovery rates up to 235 gallons/hour</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Center flue and rear flue models</span>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
-                            Get Information <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-
-                    <!-- Air Conditioners -->
-                    <div class="premium-card rounded-xl p-6 fade-in-up">
-                        <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                            <div class="text-center text-white">
-                                <i class="fas fa-snowflake text-5xl mb-3"></i>
-                                <p class="text-lg font-semibold">Air Conditioners</p>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Cooling Systems</h3>
-                        <p class="text-gray-600 mb-4">
-                            Armstrong Air conditioning systems with industry-recognized craftsmanship and dependability.
-                        </p>
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>High-efficiency cooling technology</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Modern cabinet styling</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Cost-effective operation</span>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-gold mr-2"></i>Remote locations</li>
+                            <li class="flex items-center"><i class="fas fa-check text-gold mr-2"></i>Marinas & airfields</li>
+                            <li class="flex items-center"><i class="fas fa-check text-gold mr-2"></i>Quick setup</li>
+                        </ul>
+                        <a href="contact.html" class="inline-flex items-center text-gold font-semibold hover:text-gold-dark transition-colors">
                             Learn More <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
 
-                    <!-- Humidifiers -->
+                    <!-- Premium Products -->
                     <div class="premium-card rounded-xl p-6 fade-in-up">
-                        <div class="h-48 bg-gradient-to-br from-teal-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
-                            <div class="text-center text-white">
-                                <i class="fas fa-cloud text-5xl mb-3"></i>
-                                <p class="text-lg font-semibold">Humidifiers</p>
-                            </div>
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i class="fas fa-fire text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Humidity Control</h3>
-                        <p class="text-gray-600 mb-4">
-                            Proper humidity control reduces static electricity, protects furniture, and improves comfort.
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Premium Equipment</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Top-quality furnaces, water heaters, air conditioners, and Chevron lubricants. Only the best for our customers.
                         </p>
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Reduces static electricity</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Protects wood furniture & trim</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Improves comfort & health</span>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
-                            Get Information <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-
-                    <!-- Chevron Lubricants -->
-                    <div class="premium-card rounded-xl p-6 border-2 border-gold fade-in-up">
-                        <div class="h-48 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6">
-                            <div class="text-center text-white">
-                                <i class="fas fa-oil-can text-5xl mb-3"></i>
-                                <p class="text-lg font-semibold">Chevron Lubricants</p>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Premium Lubricants</h3>
-                        <p class="text-gray-600 mb-4">
-                            Complete line of Chevron lubricants for vehicles, heavy equipment, and industrial applications.
-                        </p>
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-gold mr-2"></i>
-                                <span>Delo engine oils & gear lubricants</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-gold mr-2"></i>
-                                <span>Heavy-duty greases & transmission fluids</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-gold mr-2"></i>
-                                <span>Protect your fleet investment</span>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="text-gold font-semibold hover:text-gold-dark transition-colors">
-                            Contact Us <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-
-                    <!-- Complete Solutions -->
-                    <div class="premium-card rounded-xl p-6 bg-gradient-to-br from-forest/5 to-gold/5 fade-in-up">
-                        <div class="h-48 bg-gradient-to-br from-forest to-forest-light rounded-xl flex items-center justify-center mb-6">
-                            <div class="text-center text-white">
-                                <i class="fas fa-cogs text-5xl mb-3"></i>
-                                <p class="text-lg font-semibold">Complete Solutions</p>
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">One-Stop Shop</h3>
-                        <p class="text-gray-600 mb-4">
-                            Bruce Fuels can sell, install, service, and fill all your equipment needs under one roof.
-                        </p>
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Sales, installation & service</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>Fuel delivery & tank rental</span>
-                            </div>
-                            <div class="flex items-center text-sm text-gray-600">
-                                <i class="fas fa-check text-forest mr-2"></i>
-                                <span>24/7 emergency support</span>
-                            </div>
-                        </div>
-                        <a href="services.html" class="text-forest font-semibold hover:text-forest-dark transition-colors">
-                            View Services <i class="fas fa-arrow-right ml-2"></i>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Quality brands</li>
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Chevron lubricants</li>
+                            <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Expert selection</li>
+                        </ul>
+                        <a href="products.html" class="inline-flex items-center text-forest font-semibold hover:text-forest-dark transition-colors">
+                            View Products <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
                 </div>
@@ -376,65 +327,36 @@
         </div>
     </section>
 
-    <!-- Popular Chevron Products -->
-    <section class="py-16 bg-gray-50">
+    <!-- Emergency Troubleshooting -->
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-12 fade-in-up">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Popular Chevron Lubricants</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Before You Call Emergency Service</h2>
                     <p class="text-lg text-gray-600">
-                        Protect your vehicle fleet and equipment with quality lubrication products
+                        If your oil furnace won't start, try these simple troubleshooting steps first
                     </p>
                 </div>
 
-                <div class="premium-card rounded-xl p-8 fade-in-up">
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-6">Engine Oils & Lubricants</h3>
-                            <div class="space-y-3">
-                                <div class="flex items-center text-gray-700">
-                                    <i class="fas fa-oil-can text-gold mr-3"></i>
-                                    <span>Delo 400 & Delo 400 Multigrade</span>
-                                </div>
-                                <div class="flex items-center text-gray-700">
-                                    <i class="fas fa-oil-can text-gold mr-3"></i>
-                                    <span>Delo 400 LE</span>
-                                </div>
-                                <div class="flex items-center text-gray-700">
-                                    <i class="fas fa-oil-can text-gold mr-3"></i>
-                                    <span>Delo Gear Lubricants ESI</span>
-                                </div>
-                                <div class="flex items-center text-gray-700">
-                                    <i class="fas fa-oil-can text-gold mr-3"></i>
-                                    <span>RPM Gear Oils & Synthetic Lubricants</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-6">Transmission Fluids & Greases</h3>
-                            <div class="space-y-3">
-                                <div class="flex items-center text-gray-700">
-                                    <i class="fas fa-cog text-gold mr-3"></i>
-                                    <span>Delo Trans Fluid ESI</span>
-                                </div>
-                                <div class="flex items-center text-gray-700">
-                                    <i class="fas fa-cog text-gold mr-3"></i>
-                                    <span>RPM Synthetic Transmission Fluid</span>
-                                </div>
-                                <div class="flex items-center text-gray-700">
-                                    <i class="fas fa-cog text-gold mr-3"></i>
-                                    <span>Delo Greases EP & Dura-Lith Greases</span>
-                                </div>
-                                <div class="flex items-center text-gray-700">
-                                    <i class="fas fa-cog text-gold mr-3"></i>
-                                    <span>Ultra Duty Greases EP</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="premium-card rounded-2xl p-8 border-l-4 border-red-500 fade-in-up">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Quick Troubleshooting Checklist:</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700">
+                            <li class="leading-relaxed">Check thermostat setting - ensure it's set above room temperature and on "heat" mode</li>
+                            <li class="leading-relaxed">Verify furnace switch and breaker are in "on" position</li>
+                            <li class="leading-relaxed">Check oil supply and ensure valve is open</li>
+                        </ol>
+                        <ol class="list-decimal list-inside space-y-3 text-gray-700" start="4">
+                            <li class="leading-relaxed">Check furnace breaker or fuses in electrical panel</li>
+                            <li class="leading-relaxed font-semibold text-red-600">Press Red reset button - "Press once only"</li>
+                            <li class="leading-relaxed">If none work, call us immediately</li>
+                        </ol>
                     </div>
-                    <div class="text-center mt-8">
-                        <a href="contact.html" class="bg-gold hover:bg-gold-dark text-gray-900 px-8 py-3 rounded-xl font-semibold transition-all duration-300">
-                            <i class="fas fa-phone mr-2"></i>Contact for Pricing
+                    
+                    <div class="text-center mt-8 p-6 bg-red-50 rounded-xl">
+                        <p class="text-lg text-gray-600 mb-4">Still not working? We're here to help!</p>
+                        <a href="tel:613-225-6500" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-bold text-xl shadow-lg transform hover:scale-105 transition-all duration-300">
+                            <i class="fas fa-phone mr-2"></i>Call (613) 225-6500
                         </a>
                     </div>
                 </div>
@@ -442,40 +364,46 @@
         </div>
     </section>
 
-    <!-- Why Choose Bruce -->
-    <section class="py-16 bg-white">
+    <!-- Service Commitment -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-12 fade-in-up">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Bruce Fuels Products?</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Service Commitment</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Nearly a century of experience in selecting and providing the best energy equipment
+                        Outstanding service sets us apart from the competition
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center fade-in-up">
-                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                             <i class="fas fa-award text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Brands</h3>
-                        <p class="text-gray-600">We only stock the best - trusted manufacturers with proven track records of reliability and performance.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Customer service to match any situation, both day-to-day and emergency services.
+                        </p>
                     </div>
-                    
-                    <div class="text-center fade-in-up">
-                        <div class="w-16 h-16 feature-icon-gold rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-tools text-white text-2xl"></i>
+
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon-gold rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-clock text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Installation</h3>
-                        <p class="text-gray-600">Professional installation and setup ensure your equipment operates at peak efficiency from day one.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Reliability</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Trusted service since 1927 with modern technology and professional expertise.
+                        </p>
                     </div>
-                    
-                    <div class="text-center fade-in-up">
-                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-headset text-white text-2xl"></i>
+
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-heart text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Ongoing Support</h3>
-                        <p class="text-gray-600">Complete service and maintenance support to keep your equipment running efficiently for years to come.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Care</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Our ongoing effort to make your life better through comprehensive energy solutions.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -484,18 +412,20 @@
 
     <!-- Call to Action -->
     <section class="py-16 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-6">Ready to Upgrade Your Equipment?</h2>
-            <p class="text-lg text-green-100 mb-8 max-w-2xl mx-auto">
-                Contact Bruce Fuels today for expert advice on heating, cooling, and lubrication solutions. We're here to help you find the perfect equipment for your needs.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:613-225-6500" class="bg-white text-forest px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                    <i class="fas fa-phone mr-2"></i>Call 613-225-6500
-                </a>
-                <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-forest transition-all duration-300">
-                    <i class="fas fa-shopping-cart mr-2"></i>Get Product Quote
-                </a>
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center fade-in-up">
+                <h2 class="text-3xl font-bold mb-6">Need Service? Get Your Juice From Bruce!</h2>
+                <p class="text-lg text-green-100 mb-8 leading-relaxed">
+                    Contact Bruce Fuels today for reliable service, expert maintenance, or emergency support. We're here to help 24/7.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:613-225-6500" class="bg-gold hover:bg-gold-dark text-gray-900 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>Call 613-225-6500
+                    </a>
+                    <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Get Service Quote
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -504,13 +434,12 @@
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Company Info -->
                 <div class="lg:col-span-2">
                     <div class="mb-6">
                         <h3 class="text-2xl font-black text-forest tracking-tight">BRUCEFUELS</h3>
                         <p class="text-gray-400">Get Your Juice From Bruce</p>
                     </div>
-                    <p class="text-gray-300 mb-6 max-w-md">
+                    <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
                         Family owned since 1927, delivering premium fuel and energy solutions to Ottawa and surrounding areas.
                     </p>
                     <div class="space-y-2">
@@ -529,7 +458,6 @@
                     </div>
                 </div>
 
-                <!-- Quick Links -->
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
                     <ul class="space-y-3">
@@ -541,24 +469,21 @@
                     </ul>
                 </div>
 
-                <!-- Products -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-6">Our Products</h4>
+                    <h4 class="text-lg font-semibold mb-6">Our Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Furnaces & Boilers</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Water Heaters</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Air Conditioners</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Humidifiers</a></li>
-                        <li><a href="#" class="text-gold hover:text-gold-light transition-colors font-semibold">Chevron Lubricants</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors">Oil Delivery</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors">Equipment Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors">Installation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-forest transition-colors">Tank Rental</a></li>
+                        <li><a href="tel:613-225-6500" class="text-gold hover:text-gold-light transition-colors font-semibold">24/7 Emergency</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-400">
-                    © 2025 Bruce Fuels Ltd. All rights reserved. | Get your juice from Bruce! | 
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    © 2025 Bruce Fuels Ltd. All rights reserved. | Get your juice from Bruce! 
                 </p>
             </div>
         </div>
@@ -596,11 +521,13 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    // Close mobile menu if open
+                    mobileMenu.classList.remove('open');
                 }
             });
         });
 
-        // Intersection Observer for animations
+        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -614,9 +541,24 @@
             });
         }, observerOptions);
 
-        // Observe elements for animation
+        // Observe all fade-in elements
         document.querySelectorAll('.fade-in-up').forEach(el => {
             observer.observe(el);
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Add stagger delay to fade-in elements
+        document.querySelectorAll('.fade-in-up').forEach((el, index) => {
+            el.style.transitionDelay = `${index * 0.03}s`;
         });
     </script>
 </body>
