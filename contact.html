@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Bruce Fuels | Get Your Quote Today</title>
+    <title>Bruce Fuels - Get Your Juice From Bruce!</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-=======
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -34,38 +30,38 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        
         .hero-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #57cc99 50%, #6dd5a7 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #57cc99 100%);
         }
-<<<<<<< HEAD
+        
         .premium-card {
             background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
             border: 1px solid rgba(226, 232, 240, 0.8);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
         .premium-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: rgba(87, 204, 153, 0.3);
         }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
         .nav-link {
             position: relative;
             transition: all 0.2s ease;
-=======
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .card-hover:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-        }
-        .nav-link {
-            position: relative;
-            transition: all 0.3s ease;
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
-        }
+        
         .nav-link:hover {
             color: #fcc602;
         }
+        
         .nav-link::after {
             content: '';
             position: absolute;
@@ -74,92 +70,63 @@
             bottom: -4px;
             left: 0;
             background-color: #fcc602;
-<<<<<<< HEAD
             transition: width 0.2s ease;
-=======
-            transition: width 0.3s ease;
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
         }
+        
         .nav-link:hover::after {
             width: 100%;
         }
+        
         .mobile-menu {
             transform: translateX(-100%);
-<<<<<<< HEAD
             transition: transform 0.2s ease;
-=======
-            transition: transform 0.3s ease;
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
         }
+        
         .mobile-menu.open {
             transform: translateX(0);
         }
-<<<<<<< HEAD
-=======
-        .contact-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
-        }
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
-        .premium-glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .form-input {
-            transition: all 0.3s ease;
-        }
-        .form-input:focus {
-            border-color: #57cc99;
-            box-shadow: 0 0 0 3px rgba(87, 204, 153, 0.1);
-        }
-<<<<<<< HEAD
+        
         .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.4s ease;
         }
+        
         .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
-=======
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #57cc99, #6dd5a7);
+        }
+        
+        .feature-icon-gold {
+            background: linear-gradient(135deg, #fcc602, #fdd835);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
-    <!-- Header Navigation -->
-    <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-<<<<<<< HEAD
+    
+    <!-- Navigation Header -->
+    <header class="glass-effect fixed w-full top-0 z-50 shadow-xl">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center py-3">
                 <!-- Logo -->
                 <div class="flex items-center">
                     <div>
                         <h1 class="text-3xl font-black text-forest tracking-tight">BRUCEFUELS</h1>
-                        <p class="text-sm text-black font-medium">Get Your Juice From Bruce</p>
-=======
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-forest rounded-full flex items-center justify-center">
-                        <i class="fas fa-fire text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-2xl font-bold text-forest">Bruce Fuels</h1>
-                        <p class="text-sm text-gray-600">Premium Energy Solutions</p>
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
+                        <p class="text-sm text-forest font-medium">Get Your Juice From Bruce</p>
                     </div>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-gold font-medium">Home</a>
-                    <a href="corporate.html" class="nav-link text-gray-700 hover:text-gold font-medium">About Us</a>
-                    <a href="services.html" class="nav-link text-gray-700 hover:text-gold font-medium">Services</a>
-                    <a href="products.html" class="nav-link text-gray-700 hover:text-gold font-medium">Products</a>
-                    <a href="contact.html" class="nav-link text-gold font-medium">Contact</a>
+                    <a href="#home" class="nav-link text-gray-700 font-medium">Home</a>
+                    <a href="corporate.html" class="nav-link text-gray-700 font-medium">About Us</a>
+                    <a href="services.html" class="nav-link text-gray-700 font-medium">Services</a>
+                    <a href="products.html" class="nav-link text-gray-700 font-medium">Products</a>
+                    <a href="contact.html" class="nav-link text-gray-700 font-medium">Contact</a>
                 </nav>
 
                 <!-- Contact Info & Mobile Menu Button -->
@@ -168,7 +135,7 @@
                         <p class="text-sm text-gray-600">Get Your Juice From Bruce!</p>
                         <p class="text-lg font-semibold text-forest">613-225-6500</p>
                     </div>
-                    <button id="mobile-menu-btn" class="lg:hidden text-forest hover:text-gold">
+                    <button id="mobile-menu-btn" class="lg:hidden text-forest hover:text-gold transition-colors">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
@@ -185,13 +152,13 @@
                     </button>
                 </div>
                 <nav class="space-y-4">
-                    <a href="index.html" class="block py-2 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Home</a>
-                    <a href="corporate.html" class="block py-2 text-gray-700 hover:text-forest font-medium border-b border-gray-100">About Us</a>
-                    <a href="services.html" class="block py-2 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Services</a>
-                    <a href="products.html" class="block py-2 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Products</a>
-                    <a href="contact.html" class="block py-2 text-gold font-medium">Contact</a>
+                    <a href="#home" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Home</a>
+                    <a href="corporate.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">About Us</a>
+                    <a href="services.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Services</a>
+                    <a href="products.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Products</a>
+                    <a href="contact.html" class="block py-3 text-gray-700 hover:text-forest font-medium">Contact</a>
                 </nav>
-                <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+                <div class="mt-8 p-4 bg-gray-50 rounded-xl">
                     <p class="text-sm text-gray-600 mb-2">Get Your Juice From Bruce!</p>
                     <p class="font-semibold text-forest">613-225-6500</p>
                     <p class="text-sm text-gray-600">reidmcdonald@brucefuels.com</p>
@@ -200,604 +167,273 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-<<<<<<< HEAD
-    <section class="hero-gradient text-white pt-24 pb-12">
+    <!-- Hero Section - Compact Version -->
+    <section id="home" class="hero-gradient text-white pt-24 pb-12 relative overflow-hidden">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl lg:text-5xl font-bold mb-6">
-                    Contact Bruce Fuels
+                <!-- Hero Badge -->
+                <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+                    <i class="fas fa-award text-gold mr-2"></i>
+                    <span class="text-white font-semibold text-sm">Family Owned Since 1927 • Ottawa's Trusted Energy Partner</span>
+                </div>
+                
+                <!-- Main Headline -->
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+                    Get Your Juice
+                    <span class="block text-gold">From Bruce!</span>
                 </h1>
-                <p class="text-lg text-green-100 mb-8 leading-relaxed">
-                    Accessible and accountable - we believe in being available. Get in touch with us today for quotes, service, or emergency support.
+                
+                <!-- Subtitle -->
+                <p class="text-lg text-green-100 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Premium fuel delivery, heating equipment service, and emergency support for homeowners and farmers across Ottawa.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="tel:613-225-6500" class="premium-glass text-forest px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-all duration-300">
-                        <i class="fas fa-phone mr-2"></i>Call 613-225-6500
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+                    <a href="contact.html" class="bg-gold hover:bg-gold-dark text-gray-900 px-8 py-3 rounded-xl font-bold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-quote-left mr-2"></i>Get Your Quote Today
                     </a>
-                    <a href="mailto:reidmcdonald@brucefuels.com" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-forest transition-all duration-300">
-=======
-    <section class="hero-gradient text-white pt-24 pb-16">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6">
-                    Contact Info.
-                </h1>
-                <p class="text-xl text-green-100 mb-8 leading-relaxed">
-                    Accessible and Accountable - As part of our ongoing commitment to you, our customers both current and future, we at Bruce Fuels promptly believe available. Get in touch with us today!
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="tel:613-225-6500" class="premium-glass text-forest px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all duration-300">
-                        <i class="fas fa-phone mr-2"></i>Call 613-225-6500
+                    <a href="tel:613-225-6500" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>613-225-6500
                     </a>
-                    <a href="mailto:reidmcdonald@brucefuels.com" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-forest transition-all duration-300">
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
-                        <i class="fas fa-envelope mr-2"></i>Send Email
-                    </a>
+                </div>
+                
+                <!-- Hero Stats - Compact -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gold mb-1">97+</div>
+                        <div class="text-green-100 text-sm font-medium">Years of Service</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gold mb-1">24/7</div>
+                        <div class="text-green-100 text-sm font-medium">Emergency Support</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gold mb-1">3rd</div>
+                        <div class="text-green-100 text-sm font-medium">Generation</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gold mb-1">1927</div>
+                        <div class="text-green-100 text-sm font-medium">Established</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-<<<<<<< HEAD
-    <!-- Contact Methods Grid -->
+    <!-- Target Customers Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-12 fade-in-up">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Who We Serve</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Multiple ways to reach us - use whichever method is most convenient for you.
+                        Serving Ottawa's energy needs with reliable fuel delivery and professional equipment service.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Homeowners -->
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-home text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Homeowners</h3>
+                        <p class="text-gray-600 mb-4">
+                            Still using home heating oil? We provide reliable delivery, equipment maintenance, and emergency service to keep your home comfortable.
+                        </p>
+                        <a href="services.html" class="text-forest font-semibold hover:text-forest-dark transition-colors">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Farmers -->
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon-gold rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i class="fas fa-tractor text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Farmers</h3>
+                        <p class="text-gray-600 mb-4">
+                            Need diesel for your equipment? We supply quality fuel and lubricants to keep your farming operations running smoothly.
+                        </p>
+                        <a href="products.html" class="text-gold font-semibold hover:text-gold-dark transition-colors">
+                            View Products <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Emergency Service -->
+                    <div class="premium-card rounded-xl p-6 text-center border-2 border-red-500 fade-in-up">
+                        <div class="w-16 h-16 bg-red-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg relative">
+                            <i class="fas fa-phone-alt text-white text-2xl"></i>
+                            <div class="absolute -top-2 -right-2 bg-gold text-gray-900 text-xs font-bold px-2 py-1 rounded-full">24/7</div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Emergency Service</h3>
+                        <p class="text-gray-600 mb-4">
+                            Heating system down? Out of fuel? Our emergency team is available around the clock to get you back up and running.
+                        </p>
+                        <a href="tel:613-225-6500" class="bg-red-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors">
+                            Call Now <i class="fas fa-phone ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Story with Image -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Content Side -->
+                    <div class="fade-in-up">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">From Coal Merchants to Energy Leaders</h2>
+                        <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                            Since 1927, Bruce Fuels has evolved from humble coal merchants to Ottawa's leading comprehensive energy solutions provider, serving three generations of satisfied customers.
+                        </p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 feature-icon rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Family owned and operated since 1927</span>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 feature-icon-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Smart computer tracking for automatic delivery</span>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 feature-icon rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">Complete installation and maintenance services</span>
+                            </div>
+
+                            <div class="flex items-center space-x-3">
+                                <div class="w-8 h-8 feature-icon-gold rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-gray-700">24/7 emergency support when you need it most</span>
+                            </div>
+                        </div>
+                        
+                        <a href="corporate.html" class="inline-flex items-center bg-forest hover:bg-forest-dark text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300">
+                            <i class="fas fa-history mr-2"></i>Learn Our Story
+                        </a>
+                    </div>
+                    
+                    <!-- Image Side -->
+                    <div class="fade-in-up">
+                        <div class="relative">
+                            <img src="images/brucefuels.jpg" alt="Bruce Fuels Professional Service" class="w-full h-80 object-cover rounded-2xl shadow-2xl">
+                            <div class="absolute -bottom-4 -right-4 bg-gold text-gray-900 px-6 py-3 rounded-xl font-bold text-lg shadow-xl">
+                                Since 1927!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Services Overview -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Core Services</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Everything you need for your energy requirements - from reliable delivery to expert service.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Phone -->
-                    <div class="premium-card rounded-xl shadow-lg p-6 text-center fade-in-up">
-                        <div class="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-phone text-forest text-2xl"></i>
+                    <!-- Oil Delivery -->
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-12 h-12 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-truck text-white text-lg"></i>
                         </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Call Us</h3>
-                        <div class="space-y-2">
-                            <a href="tel:613-225-6500" class="text-forest font-bold text-xl hover:text-forest-light transition-colors block">
-                                613-225-6500
-                            </a>
-                            <p class="text-sm text-gray-600">Mon-Fri: 8AM-5PM</p>
-                        </div>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="premium-card rounded-xl shadow-lg p-6 text-center fade-in-up">
-                        <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-envelope text-gold text-2xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Email Us</h3>
-                        <div class="space-y-2 text-center">
-                            <a href="mailto:reidmcdonald@brucefuels.com" class="text-forest font-semibold hover:text-forest-light transition-colors block text-sm break-all">
-                                reidmcdonald@brucefuels.com
-                            </a>
-                            <p class="text-sm text-gray-600">Quick response</p>
-                        </div>
-                    </div>
-
-                    <!-- Location -->
-                    <div class="premium-card rounded-xl shadow-lg p-6 text-center fade-in-up">
-                        <div class="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-map-marker-alt text-forest text-2xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Visit Us</h3>
-                        <div class="space-y-1 text-gray-600 text-sm">
-                            <p class="font-semibold">2680 Overton Dr.</p>
-                            <p class="font-semibold">Ottawa, ON</p>
-                            <p class="font-semibold">K1G 6T8</p>
-                        </div>
-                    </div>
-
-                    <!-- Emergency -->
-                    <div class="premium-card rounded-xl shadow-lg p-6 text-center border-2 border-red-500 fade-in-up">
-                        <div class="w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-exclamation-triangle text-red-500 text-2xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">24/7 Emergency</h3>
-                        <div class="space-y-2">
-                            <a href="tel:613-225-6500" class="text-red-600 font-bold text-xl hover:text-red-700 transition-colors block">
-                                613-225-6500
-                            </a>
-                            <p class="text-sm text-gray-600">Always available</p>
-=======
-    <!-- Contact Information -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Accessible and Accountable</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Regardless of the reason, we encourage you to use whichever means is convenient to communicate. Please see the options below for ways to get in touch.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                <!-- By Mail -->
-                <div class="card-hover contact-card rounded-xl shadow-lg p-8 text-center">
-                    <div class="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-envelope text-forest text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">By Mail</h3>
-                    <div class="space-y-2 text-gray-600">
-                        <p class="font-semibold">2680 Overton Dr.</p>
-                        <p class="font-semibold">Ottawa, Ontario</p>
-                        <p class="font-semibold">K1G 6T8</p>
-                    </div>
-                </div>
-
-                <!-- By Email -->
-                <div class="card-hover contact-card rounded-xl shadow-lg p-8 text-center">
-                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-at text-gold text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">By Email</h3>
-<div class="space-y-2 text-center">
-    <a href="mailto:reidmcdonald@brucefuels.com" class="text-forest font-semibold hover:text-forest-light transition-colors block text-sm whitespace-nowrap">
-        reidmcdonald@brucefuels.com
-    </a>
-</div>
-                </div>
-
-                <!-- By Phone -->
-                <div class="card-hover contact-card rounded-xl shadow-lg p-8 text-center">
-                    <div class="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-phone text-forest text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">By Phone</h3>
-                    <div class="space-y-2">
-                        <a href="tel:613-225-6500" class="text-forest font-bold text-lg hover:text-forest-light transition-colors block">
-                            613.225.6500
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 24 Hour Service -->
-                <div class="card-hover contact-card rounded-xl shadow-lg p-8 text-center border-2 border-gold">
-                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-clock text-gold text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">24 Hour Service</h3>
-                    <div class="space-y-2">
-                        <a href="tel:613-225-6500" class="text-gold font-bold text-lg hover:text-gold-light transition-colors block">
-                            613.225.6500
-                        </a>
-                        <p class="text-sm text-gray-600">Emergency Support</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Boxes -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose Bruce Fuels?</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Get your juice from Bruce! Here's what sets us apart from the competition.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Competitive Pricing -->
-                <div class="card-hover contact-card rounded-xl shadow-lg p-8 text-center">
-                    <div class="mb-6">
-                        <!-- PLACE PHONE/CALCULATOR IMAGE HERE -->
-                        <!-- <img src="images/competitive-pricing.jpg" alt="Competitive Pricing" class="w-16 h-16 mx-auto rounded-lg"> -->
-                        <div class="w-16 h-16 bg-forest/10 rounded-lg flex items-center justify-center mx-auto">
-                            <i class="fas fa-calculator text-forest text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Call for a Quote...</h3>
-                    <p class="text-forest font-bold text-lg">For Competitive Pricing Call Bruce</p>
-                </div>
-
-                <!-- Service Excellence -->
-                <div class="card-hover contact-card rounded-xl shadow-lg p-8 text-center">
-                    <div class="mb-6">
-                        <!-- PLACE SERVICE TRUCK IMAGE HERE -->
-                        <!-- <img src="images/service-truck.jpg" alt="Service Excellence" class="w-16 h-16 mx-auto rounded-lg"> -->
-                        <div class="w-16 h-16 bg-gold/10 rounded-lg flex items-center justify-center mx-auto">
-                            <i class="fas fa-truck text-gold text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Service...</h3>
-                    <p class="text-forest font-bold text-lg">Service That Is Second To None</p>
-                </div>
-
-                <!-- Premium Products -->
-                <div class="card-hover contact-card rounded-xl shadow-lg p-8 text-center">
-                    <div class="mb-6">
-                        <!-- PLACE PRODUCTS IMAGE HERE -->
-                        <!-- <img src="images/premium-products.jpg" alt="Premium Products" class="w-16 h-16 mx-auto rounded-lg"> -->
-                        <div class="w-16 h-16 bg-forest/10 rounded-lg flex items-center justify-center mx-auto">
-                            <i class="fas fa-fire text-forest text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Products...</h3>
-                    <p class="text-forest font-bold text-lg">Bruce Fuels Only Stocks The Best</p>
-                </div>
-
-                <!-- Company Heritage -->
-                <div class="card-hover contact-card rounded-xl shadow-lg p-8 text-center">
-                    <div class="mb-6">
-                        <!-- PLACE COMPANY HERITAGE IMAGE HERE -->
-                        <!-- <img src="images/company-heritage.jpg" alt="Company Heritage" class="w-16 h-16 mx-auto rounded-lg"> -->
-                        <div class="w-16 h-16 bg-gold/10 rounded-lg flex items-center justify-center mx-auto">
-                            <i class="fas fa-history text-gold text-2xl"></i>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Company...</h3>
-                    <p class="text-forest font-bold text-lg">A Proud Past & Bright Future</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form & Map -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-16">
-                <!-- Contact Form -->
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                    <p class="text-gray-600 mb-8">
-                        Fill out the form below and we'll get back to you as soon as possible with your quote or to answer your questions.
-                    </p>
-
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                            </div>
-                            <div>
-                                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                            </div>
-                        </div>
-
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                                <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
-                            <select id="subject" name="subject" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                                <option value="">Select a subject</option>
-                                <option value="oil-delivery">Oil Delivery</option>
-                                <option value="tank-rental">Tank Rental</option>
-                                <option value="equipment-service">Equipment Service</option>
-                                <option value="installation">Installation</option>
-                                <option value="emergency-service">Emergency Service</option>
-                                <option value="quote-request">Quote Request</option>
-                                <option value="general-inquiry">General Inquiry</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Please provide details about your needs..." class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none resize-none bg-white"></textarea>
-                        </div>
-
-                        <div class="flex items-start">
-                            <input type="checkbox" id="consent" name="consent" required class="w-4 h-4 text-forest border-gray-300 rounded focus:ring-forest mt-1">
-                            <label for="consent" class="ml-2 text-sm text-gray-600">
-                                I consent to the collection and use of my personal information for the purpose of responding to my inquiry. *
-                            </label>
-                        </div>
-
-                        <div>
-                            <button type="submit" class="w-full bg-forest text-white px-8 py-4 rounded-lg font-semibold hover:bg-forest-dark transition-all duration-300">
-                                <i class="fas fa-paper-plane mr-2"></i>Send Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Location & Info -->
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Visit Our Location</h2>
-                    <p class="text-gray-600 mb-8">
-                        Visit our facility in Ottawa for in-person consultations or service appointments. We've been serving the community since 1927.
-                    </p>
-
-                    <!-- Map Container -->
-                    <div class="bg-gray-100 rounded-lg h-80 mb-8 flex items-center justify-center">
-                        <div class="text-center">
-                            <i class="fas fa-map-marker-alt text-forest text-4xl mb-4"></i>
-                            <h3 class="text-xl font-semibold text-gray-900 mb-2">2680 Overton Drive</h3>
-                            <p class="text-gray-600 mb-4">Ottawa, ON K1G 6T8</p>
-                            <a href="https://maps.google.com/?q=2680+Overton+Drive,+Ottawa,+ON+K1G+6T8" target="_blank" class="inline-block bg-forest text-white px-6 py-3 rounded-lg font-semibold hover:bg-forest-dark transition-all duration-300">
-                                <i class="fas fa-external-link-alt mr-2"></i>View on Google Maps
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Business Hours & Details -->
-                    <div class="bg-white rounded-lg p-6 shadow-lg border border-gray-200">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Business Information</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-clock text-forest mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Business Hours</h4>
-                                    <p class="text-gray-600 text-sm">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                                    <p class="text-gold font-semibold text-sm">24/7 Emergency Service Available</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-phone text-forest mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Phone</h4>
-                                    <p class="text-forest font-bold text-lg">613-225-6500</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-envelope text-forest mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Email</h4>
-                                    <p class="text-forest font-semibold">reidmcdonald@brucefuels.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3">
-                                <i class="fas fa-fire text-forest mt-1"></i>
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Services</h4>
-                                    <p class="text-gray-600 text-sm">Complete fuel delivery, equipment service, and emergency support</p>
-                                </div>
-                            </div>
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<<<<<<< HEAD
-    <!-- Contact Form & Business Info -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Contact Form -->
-                    <div class="fade-in-up">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-                        <p class="text-gray-600 mb-8">
-                            Fill out the form below and we'll get back to you within 24 hours with your quote or to answer your questions.
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Oil Delivery</h3>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Smart tracking and automatic delivery. Never run out of fuel again.
                         </p>
-
-                        <form id="contact-form" class="premium-card rounded-xl p-8 space-y-6">
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                                    <input type="text" id="firstName" name="firstName" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                                </div>
-                                <div>
-                                    <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                                    <input type="text" id="lastName" name="lastName" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                                </div>
-                            </div>
-
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                                    <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                                </div>
-                                <div>
-                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">What can we help you with? *</label>
-                                <select id="subject" name="subject" required class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none bg-white">
-                                    <option value="">Select a service</option>
-                                    <option value="oil-delivery">Oil Delivery & Setup</option>
-                                    <option value="equipment-service">Equipment Service & Maintenance</option>
-                                    <option value="installation">Equipment Installation</option>
-                                    <option value="tank-rental">Tank Rental for Remote Sites</option>
-                                    <option value="emergency-service">Emergency Service</option>
-                                    <option value="product-quote">Product Quote</option>
-                                    <option value="general-inquiry">General Question</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Tell us about your needs *</label>
-                                <textarea id="message" name="message" rows="4" required placeholder="Please provide details about your project, location, timing, etc..." class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none resize-none bg-white"></textarea>
-                            </div>
-
-                            <div class="flex items-start">
-                                <input type="checkbox" id="consent" name="consent" required class="w-4 h-4 text-forest border-gray-300 rounded focus:ring-forest mt-1">
-                                <label for="consent" class="ml-2 text-sm text-gray-600">
-                                    I consent to Bruce Fuels contacting me about my inquiry. *
-                                </label>
-                            </div>
-
-                            <div>
-                                <button type="submit" class="w-full bg-forest text-white px-8 py-4 rounded-lg font-semibold hover:bg-forest-dark transition-all duration-300">
-                                    <i class="fas fa-paper-plane mr-2"></i>Send Message
-                                </button>
-                            </div>
-                        </form>
+                        <a href="services.html" class="text-forest font-semibold text-sm hover:text-forest-dark transition-colors">
+                            Learn More →
+                        </a>
                     </div>
 
-                    <!-- Business Info -->
-                    <div class="fade-in-up">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Business Information</h2>
-                        
-                        <!-- Map Placeholder -->
-                        <div class="premium-card rounded-xl p-6 mb-8">
-                            <div class="bg-gray-100 rounded-lg h-64 mb-6 flex items-center justify-center">
-                                <div class="text-center">
-                                    <i class="fas fa-map-marker-alt text-forest text-4xl mb-4"></i>
-                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">2680 Overton Drive</h3>
-                                    <p class="text-gray-600 mb-4">Ottawa, ON K1G 6T8</p>
-                                    <a href="https://maps.google.com/?q=2680+Overton+Drive,+Ottawa,+ON+K1G+6T8" target="_blank" class="inline-block bg-forest text-white px-6 py-2 rounded-lg font-semibold hover:bg-forest-dark transition-all duration-300">
-                                        <i class="fas fa-external-link-alt mr-2"></i>View on Google Maps
-                                    </a>
-                                </div>
-                            </div>
+                    <!-- Equipment Service -->
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-12 h-12 feature-icon-gold rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-white text-lg"></i>
                         </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Equipment Service</h3>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Professional maintenance extends equipment life by 20-30%.
+                        </p>
+                        <a href="services.html" class="text-gold font-semibold text-sm hover:text-gold-dark transition-colors">
+                            Learn More →
+                        </a>
+                    </div>
 
-                        <!-- Contact Details -->
-                        <div class="premium-card rounded-xl p-6 mb-8">
-                            <h3 class="text-xl font-bold text-gray-900 mb-6">Contact Details</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start space-x-3">
-                                    <i class="fas fa-clock text-forest mt-1"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900">Business Hours</h4>
-                                        <p class="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM</p>
-                                        <p class="text-gold font-semibold">24/7 Emergency Service Available</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <i class="fas fa-phone text-forest mt-1"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900">Phone</h4>
-                                        <p class="text-forest font-bold text-lg">613-225-6500</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <i class="fas fa-envelope text-forest mt-1"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900">Email</h4>
-                                        <p class="text-forest font-semibold">reidmcdonald@brucefuels.com</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start space-x-3">
-                                    <i class="fas fa-tools text-forest mt-1"></i>
-                                    <div>
-                                        <h4 class="font-semibold text-gray-900">Our Services</h4>
-                                        <p class="text-gray-600">Fuel delivery, equipment service, installation, and emergency support</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Installation -->
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-12 h-12 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-wrench text-white text-lg"></i>
                         </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Installation</h3>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Complete system setup and professional installation services.
+                        </p>
+                        <a href="services.html" class="text-forest font-semibold text-sm hover:text-forest-dark transition-colors">
+                            Learn More →
+                        </a>
+                    </div>
 
-                        <!-- Why Choose Bruce -->
-                        <div class="premium-card rounded-xl p-6 bg-gradient-to-br from-forest/5 to-gold/5">
-                            <h3 class="text-xl font-bold text-gray-900 mb-4">Why Choose Bruce Fuels?</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="text-center">
-                                    <div class="w-12 h-12 bg-forest/10 rounded-lg flex items-center justify-center mx-auto mb-2">
-                                        <i class="fas fa-award text-forest"></i>
-                                    </div>
-                                    <p class="text-sm font-semibold text-gray-900">97+ Years</p>
-                                    <p class="text-xs text-gray-600">Family Owned</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mx-auto mb-2">
-                                        <i class="fas fa-clock text-gold"></i>
-                                    </div>
-                                    <p class="text-sm font-semibold text-gray-900">24/7</p>
-                                    <p class="text-xs text-gray-600">Emergency</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="w-12 h-12 bg-forest/10 rounded-lg flex items-center justify-center mx-auto mb-2">
-                                        <i class="fas fa-tools text-forest"></i>
-                                    </div>
-                                    <p class="text-sm font-semibold text-gray-900">Complete</p>
-                                    <p class="text-xs text-gray-600">Solutions</p>
-                                </div>
-                                <div class="text-center">
-                                    <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center mx-auto mb-2">
-                                        <i class="fas fa-heart text-gold"></i>
-                                    </div>
-                                    <p class="text-sm font-semibold text-gray-900">Customer</p>
-                                    <p class="text-xs text-gray-600">Focused</p>
-                                </div>
-                            </div>
+                    <!-- Premium Products -->
+                    <div class="premium-card rounded-xl p-6 text-center fade-in-up">
+                        <div class="w-12 h-12 feature-icon-gold rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-fire text-white text-lg"></i>
                         </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">Premium Equipment</h3>
+                        <p class="text-gray-600 text-sm mb-3">
+                            Top-quality furnaces, water heaters, and Chevron lubricants.
+                        </p>
+                        <a href="products.html" class="text-gold font-semibold text-sm hover:text-gold-dark transition-colors">
+                            View Products →
+                        </a>
                     </div>
                 </div>
-=======
-    <!-- Partners & Affiliates -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Of Interest</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Bruce Fuels is proud of its many partners and affiliations. This list of contacts that may be of interest to you:
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Chevron</h3>
-                </a>
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Schooner Transport - NA</h3>
-                </a>
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Better Business Bureau</h3>
-                </a>
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Weather Network</h3>
-                </a>
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Dovre Stoves</h3>
-                </a>
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Brock Engineering</h3>
-                </a>
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Armstrong Air</h3>
-                </a>
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Aero Heating Comfort</h3>
-                </a>
-                <a href="#" target="_blank" class="card-hover bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-forest transition-colors">
-                    <h3 class="font-semibold text-gray-900 hover:text-forest transition-colors">Dynamic Air Cleaner</h3>
-                </a>
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
             </div>
         </div>
     </section>
 
-    <!-- Emergency CTA -->
-<<<<<<< HEAD
-    <section class="py-12 hero-gradient text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4">Need Emergency Service?</h2>
-            <p class="text-green-100 text-lg mb-6 max-w-2xl mx-auto">
-                Heating system down? Out of fuel? Our emergency team is available 24/7 to get you back up and running.
-=======
+    <!-- Call to Action Section -->
     <section class="py-16 hero-gradient text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Need Emergency Service?</h2>
-            <p class="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
-                Our 24/7 emergency service team is available for urgent fuel delivery and heating system needs. Get your juice from Bruce!
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:613-225-6500" class="bg-white text-forest px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                    <i class="fas fa-phone mr-2"></i>Call Emergency Line
-                </a>
-                <a href="mailto:reidmcdonald@brucefuels.com" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-forest transition-all duration-300">
-                    <i class="fas fa-envelope mr-2"></i>Email for Urgent Matters
-                </a>
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center fade-in-up">
+                <h2 class="text-3xl font-bold mb-6">Ready to Get Your Juice From Bruce?</h2>
+                <p class="text-lg text-green-100 mb-8 leading-relaxed">
+                    Contact Bruce Fuels today for premium fuel delivery, expert equipment service, or emergency support.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:613-225-6500" class="bg-gold hover:bg-gold-dark text-gray-900 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl transform hover:scale-105 transition-all duration-300">
+                        <i class="fas fa-phone mr-2"></i>Call 613-225-6500
+                    </a>
+                    <a href="contact.html" class="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
+                        <i class="fas fa-envelope mr-2"></i>Get Quote Today
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-<<<<<<< HEAD
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -807,26 +443,8 @@
                         <h3 class="text-2xl font-black text-forest tracking-tight">BRUCEFUELS</h3>
                         <p class="text-gray-400">Get Your Juice From Bruce</p>
                     </div>
-                    <p class="text-gray-300 mb-6 max-w-md">
+                    <p class="text-gray-300 mb-6 max-w-md leading-relaxed">
                         Family owned since 1927, delivering premium fuel and energy solutions to Ottawa and surrounding areas.
-=======
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Company Info -->
-                <div class="lg:col-span-2">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-10 h-10 bg-forest rounded-full flex items-center justify-center">
-                            <i class="fas fa-fire text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Bruce Fuels</h3>
-                            <p class="text-gray-400">Premium Energy Solutions</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-300 mb-6 max-w-md">
-                        Family owned since 1927, delivering premium fuel and energy solutions to Ottawa and surrounding areas. Get your juice from Bruce!
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
                     </p>
                     <div class="space-y-2">
                         <p class="flex items-center text-gray-300">
@@ -848,7 +466,7 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
                         <li><a href="corporate.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
                         <li><a href="services.html" class="text-gray-300 hover:text-white transition-colors">Services</a></li>
                         <li><a href="products.html" class="text-gray-300 hover:text-white transition-colors">Products</a></li>
@@ -856,41 +474,24 @@
                     </ul>
                 </div>
 
-<<<<<<< HEAD
-                <!-- Contact Methods -->
-=======
-                <!-- Contact -->
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
+                <!-- Services -->
                 <div>
-                    <h4 class="text-lg font-semibold mb-6">Contact Methods</h4>
+                    <h4 class="text-lg font-semibold mb-6">Our Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="tel:613-225-6500" class="text-gold hover:text-gold-light transition-colors font-semibold">Phone: 613-225-6500</a></li>
-                        <li><a href="mailto:reidmcdonald@brucefuels.com" class="text-gray-300 hover:text-white transition-colors">Email Us</a></li>
-<<<<<<< HEAD
-                        <li><span class="text-gray-300">Visit: 2680 Overton Dr.</span></li>
-                        <li><span class="text-gold font-semibold">24/7 Emergency Available</span></li>
-=======
-                        <li><span class="text-gray-300">Mail: 2680 Overton Dr.</span></li>
-                        <li><span class="text-gold font-semibold">24/7 Emergency</span></li>
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
+                        <li><a href="services.html" class="text-gray-300 hover:text-forest transition-colors">Oil Delivery</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-forest transition-colors">Equipment Service</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-forest transition-colors">Installation</a></li>
+                        <li><a href="products.html" class="text-gray-300 hover:text-forest transition-colors">Premium Products</a></li>
+                        <li><a href="tel:613-225-6500" class="text-gold hover:text-gold-light transition-colors font-semibold">24/7 Emergency</a></li>
                     </ul>
                 </div>
             </div>
 
-<<<<<<< HEAD
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    © 2025 Bruce Fuels Ltd. All rights reserved. | Get your juice from Bruce! 
-                 
-                   
-
-=======
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
                 <p class="text-gray-400">
                     © 2025 Bruce Fuels Ltd. All rights reserved. | Get your juice from Bruce! | 
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
                     <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
                 </p>
             </div>
         </div>
@@ -918,8 +519,6 @@
             }
         });
 
-<<<<<<< HEAD
-=======
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -930,45 +529,13 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    // Close mobile menu if open
+                    mobileMenu.classList.remove('open');
                 }
             });
         });
 
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
-        // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Basic validation
-            if (!data.firstName || !data.lastName || !data.email || !data.subject || !data.message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            if (!data.consent) {
-                alert('Please agree to the consent statement.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-            
-            // Show success message (in real implementation, this would submit to a server)
-            alert('Thank you for your message! We will get back to you within 24 hours. Get your juice from Bruce!');
-            
-            // Reset form
-            this.reset();
-        });
-
-        // Intersection Observer for animations
+        // Intersection Observer for fade-in animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -977,27 +544,30 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-<<<<<<< HEAD
                     entry.target.classList.add('visible');
-=======
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
                 }
             });
         }, observerOptions);
 
-        // Observe elements for animation
-<<<<<<< HEAD
+        // Observe all fade-in elements
         document.querySelectorAll('.fade-in-up').forEach(el => {
-=======
-        document.querySelectorAll('.card-hover').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
->>>>>>> 8ce94d1ab830358b43208b34f7507e67d2ad49b3
             observer.observe(el);
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Add stagger delay to fade-in elements
+        document.querySelectorAll('.fade-in-up').forEach((el, index) => {
+            el.style.transitionDelay = `${index * 0.05}s`;
         });
     </script>
 </body>
-</html>
+</html
