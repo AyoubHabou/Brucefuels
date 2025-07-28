@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Bruce Fuels | Premium Heating & Energy Equipment</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script>
         tailwind.config = {
@@ -33,16 +33,19 @@
         .hero-gradient {
             background: linear-gradient(135deg, #0f172a 0%, #57cc99 50%, #6dd5a7 100%);
         }
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        .premium-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .card-hover:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        .premium-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: rgba(87, 204, 153, 0.3);
         }
         .nav-link {
             position: relative;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
         .nav-link:hover {
             color: #fcc602;
@@ -55,21 +58,32 @@
             bottom: -4px;
             left: 0;
             background-color: #fcc602;
-            transition: width 0.3s ease;
+            transition: width 0.2s ease;
         }
         .nav-link:hover::after {
             width: 100%;
         }
         .mobile-menu {
             transform: translateX(-100%);
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
         .mobile-menu.open {
             transform: translateX(0);
         }
-        .product-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.4s ease;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .feature-icon {
+            background: linear-gradient(135deg, #57cc99, #6dd5a7);
+        }
+        .feature-icon-gold {
+            background: linear-gradient(135deg, #fcc602, #fdd835);
         }
         .premium-glass {
             background: rgba(255, 255, 255, 0.95);
@@ -81,16 +95,13 @@
 <body class="bg-gray-50">
     <!-- Header Navigation -->
     <header class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-3">
                 <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-forest rounded-full flex items-center justify-center">
-                        <i class="fas fa-fire text-white text-xl"></i>
-                    </div>
+                <div class="flex items-center">
                     <div>
-                        <h1 class="text-2xl font-bold text-forest">Bruce Fuels</h1>
-                        <p class="text-sm text-gray-600">Premium Energy Solutions</p>
+                        <h1 class="text-3xl font-black text-forest tracking-tight">BRUCEFUELS</h1>
+                        <p class="text-sm text-black font-medium">Get Your Juice From Bruce</p>
                     </div>
                 </div>
 
@@ -142,20 +153,20 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white pt-24 pb-16">
-        <div class="container mx-auto px-4">
+    <section class="hero-gradient text-white pt-24 pb-12">
+        <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-5xl lg:text-6xl font-bold mb-6">
-                    Our Products
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6">
+                    Premium Energy Equipment
                 </h1>
-                <p class="text-xl text-green-100 mb-8 leading-relaxed">
-                    Bruce Fuels has seen a lot of changes in the environmental services industry since 1927. With each change we have managed our operations so that these changes become enhancements to our business, and therefore to you, our customer.
+                <p class="text-lg text-green-100 mb-8 leading-relaxed">
+                    From heating systems to lubricants, Bruce Fuels offers only the best quality products. We use state-of-the-art systems to stay ahead of price fluctuations and pass those savings to you.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contact.html" class="premium-glass text-forest px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all duration-300">
+                    <a href="contact.html" class="premium-glass text-forest px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-all duration-300">
                         <i class="fas fa-shopping-cart mr-2"></i>Get Product Quote
                     </a>
-                    <a href="tel:613-225-6500" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-forest transition-all duration-300">
+                    <a href="tel:613-225-6500" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-forest transition-all duration-300">
                         <i class="fas fa-phone mr-2"></i>Call Expert
                     </a>
                 </div>
@@ -163,289 +174,308 @@
         </div>
     </section>
 
-    <!-- Products Introduction -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Premium Energy Equipment</h2>
-                <p class="text-xl text-gray-600 leading-relaxed">
-                    From humble beginnings as a coal merchant to our current position as a leading heating, air conditioning, and lubricants specialist, Bruce has met each challenge head on. We use state-of-the-art computer systems to keep ahead of oil and lubricant price fluctuations.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Furnaces Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Furnaces</h2>
-                <p class="text-xl text-gray-600">Premium heating solutions from trusted manufacturers</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Brock Engineering -->
-                <div class="card-hover product-card rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-64 bg-gradient-to-br from-blue-600 to-indigo-700 flex items-center justify-center">
-                        <!-- PLACE BROCK FURNACE IMAGE HERE -->
-                        <!-- <img src="images/brock-furnace.jpg" alt="Brock Engineering Furnace" class="w-full h-full object-cover"> -->
-                        <div class="text-center text-white">
-                            <i class="fas fa-fire text-6xl mb-4"></i>
-                            <p class="text-lg font-semibold">Brock Furnace Image</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Brock Engineering</h3>
-                        <p class="text-gray-600 mb-6">
-                            Brock furnaces are built on experience that only we can offer. The ultimate in technology in the world of heating. Compact size for maximum performance. The name Brock is your assurance of comfort and satisfaction year after year.
-                        </p>
-                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
-                            Contact Bruce Fuels <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Clare Furnaces and Boilers -->
-                <div class="card-hover product-card rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-64 bg-gradient-to-br from-green-600 to-emerald-700 flex items-center justify-center">
-                        <!-- PLACE CLARE FURNACE IMAGE HERE -->
-                        <!-- <img src="images/clare-furnace.jpg" alt="Clare Furnace and Boiler" class="w-full h-full object-cover"> -->
-                        <div class="text-center text-white">
-                            <i class="fas fa-fire text-6xl mb-4"></i>
-                            <p class="text-lg font-semibold">Clare Furnace Image</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Clare Furnaces and Boilers</h3>
-                        <p class="text-gray-600 mb-6">
-                            Clare oil furnaces and boilers use proven state-of-the-art technology to achieve up to 87% efficiency, exceeding Federal Efficiency standards. The Elite Plus has all the features you've come to expect from Clare, including multiple venting options, energy efficiency, dependability, flexibility, and most of all, quiet, efficient heat distribution.
-                        </p>
-                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
-                            Contact Bruce Fuels <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Dovre Oil Stoves -->
-                <div class="card-hover product-card rounded-xl shadow-lg overflow-hidden">
-                    <div class="h-64 bg-gradient-to-br from-orange-600 to-red-700 flex items-center justify-center">
-                        <!-- PLACE DOVRE STOVE IMAGE HERE -->
-                        <!-- <img src="images/dovre-stove.jpg" alt="Dovre Oil Stove" class="w-full h-full object-cover"> -->
-                        <div class="text-center text-white">
-                            <i class="fas fa-fire text-6xl mb-4"></i>
-                            <p class="text-lg font-semibold">Dovre Stove Image</p>
-                        </div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Dovre Oil Stoves</h3>
-                        <p class="text-gray-600 mb-6">
-                            An economical, convenient, reliable option to the traditional wood stove. Six settings for more comfort control. No electricity is required to achieve up to 34,500 Btu/hr. Fuel consumption is as low as 0.095 gph, with up to 85% efficiency.
-                        </p>
-                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
-                            Contact Bruce Fuels <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Water Heaters Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Water Heaters</h2>
-                <p class="text-xl text-gray-600">High-efficiency water heating solutions</p>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <!-- Aero High Efficiency Water Heaters -->
-                <div class="card-hover product-card rounded-xl shadow-lg overflow-hidden">
-                    <div class="grid md:grid-cols-2 gap-0">
-                        <div class="h-64 md:h-auto bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
-                            <!-- PLACE AERO WATER HEATER IMAGE HERE -->
-                            <!-- <img src="images/aero-water-heater.jpg" alt="Aero Water Heater" class="w-full h-full object-cover"> -->
-                            <div class="text-center text-white">
-                                <i class="fas fa-tint text-6xl mb-4"></i>
-                                <p class="text-lg font-semibold">Aero Water Heater Image</p>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Aero High Efficiency, Oil Fired Water Heaters</h3>
-                            <p class="text-gray-600 mb-6">
-                                Aero has been creating heating products since 1940. Today, after the latest technology, we offer trouble-free models of Aero water heaters. The center flue models deliver from 32 to 50 gallons, with recovery rates as high as 116 gallons per hour. Rear flue models are designed for heavier demand with recovery rates as high as 235 gallons per hour with up to 70 gallons of hot water on demand.
-                            </p>
-                            <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
-                                Get Information <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Air Conditioners Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Air Conditioners</h2>
-                <p class="text-xl text-gray-600">Professional cooling systems for optimal comfort</p>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <!-- Armstrong Air Conditioners -->
-                <div class="card-hover product-card rounded-xl shadow-lg overflow-hidden">
-                    <div class="grid md:grid-cols-2 gap-0">
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Armstrong Air Conditioners</h3>
-                            <p class="text-gray-600 mb-6">
-                                The same industry-recognized craftsmanship and dependability that have always made an Armstrong Air cooling system a smart, cost-effective choice, make new energy technology design. An updated, modern cabinet style and our advanced high-efficiency cooling technology make choosing Armstrong Air a wiser, more attractive choice than ever.
-                            </p>
-                            <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
-                                Learn More <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                        <div class="h-64 md:h-auto bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-                            <!-- PLACE ARMSTRONG AC IMAGE HERE -->
-                            <!-- <img src="images/armstrong-ac.jpg" alt="Armstrong Air Conditioner" class="w-full h-full object-cover"> -->
-                            <div class="text-center text-white">
-                                <i class="fas fa-snowflake text-6xl mb-4"></i>
-                                <p class="text-lg font-semibold">Armstrong AC Image</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Humidifiers Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Humidifiers</h2>
-                <p class="text-xl text-gray-600">Optimal humidity control for enhanced comfort</p>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <!-- General Humidifiers -->
-                <div class="card-hover product-card rounded-xl shadow-lg overflow-hidden">
-                    <div class="grid md:grid-cols-2 gap-0">
-                        <div class="h-64 md:h-auto bg-gradient-to-br from-teal-500 to-green-600 flex items-center justify-center">
-                            <!-- PLACE HUMIDIFIER IMAGE HERE -->
-                            <!-- <img src="images/general-humidifier.jpg" alt="General Humidifier" class="w-full h-full object-cover"> -->
-                            <div class="text-center text-white">
-                                <i class="fas fa-tint text-6xl mb-4"></i>
-                                <p class="text-lg font-semibold">Humidifier Image</p>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">General Humidifiers</h3>
-                            <p class="text-gray-600 mb-6">
-                                Proper humidity levels in your home reduce annoying static electricity, dried cracked furniture and wood trim, dry wilting house plants. You'll feel more comfortable as scratchy dry skin, throats, and noses are soothed. Properly humidified air feels warmer allowing you to turn down your thermostat a few degrees and reduce energy costs yet still feel comfortable.
-                            </p>
-                            <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
-                                Get Information <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lubricants Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Lubricants</h2>
-                <p class="text-xl text-gray-600">Premium Chevron lubricants for all your needs</p>
-            </div>
-
+    <!-- Product Categories Grid -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
             <div class="max-w-6xl mx-auto">
-                <!-- Chevron Lubricants -->
-                <div class="card-hover product-card rounded-xl shadow-lg overflow-hidden">
-                    <div class="grid lg:grid-cols-2 gap-0">
-                        <div class="p-8">
-                            <div class="flex items-center mb-6">
-                                <div class="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mr-4">
-                                    <!-- PLACE CHEVRON LOGO HERE -->
-                                    <!-- <img src="images/chevron-logo.png" alt="Chevron" class="w-12 h-12"> -->
-                                    <i class="fas fa-oil-can text-white text-2xl"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-gray-900">Chevron Lubricants</h3>
-                            </div>
-                            <p class="text-gray-600 mb-6">
-                                Bruce Fuels is a proud supplier of Chevron lubricants. Protect your vehicle fleet and your bottom line from higher oil and lubricant costs. For more information on our line of quality lubrication products contact us.
-                            </p>
-                            <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors mb-8 inline-block">
-                                Contact Us <i class="fas fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
-                        <div class="p-8 bg-gray-100">
-                            <h4 class="text-xl font-bold text-gray-900 mb-6">Our Popular Products Include:</h4>
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <ul class="space-y-2 text-gray-600">
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Delo 400</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Delo 400 Multigrade</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Delo 400 LE</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Delo Gear Lubricants ESI</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>RPM Gear Oils</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>RPM Synthetic Gear Lubricant</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>RPM Universal Gear Lubricants</li>
-                                </ul>
-                                <ul class="space-y-2 text-gray-600">
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Synthetic Gear Lubricants Tegra</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Delo Trans Fluid ESI</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>RPM Synthetic Transmission Fluid SAE 50</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Delo Greases EP</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Dura-Lith Greases EP</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>RPM Heavy Duty LC Grease EP</li>
-                                    <li class="flex items-center"><i class="fas fa-check text-forest mr-2"></i>Ultra Duty Greases EP</li>
-                                </ul>
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Product Categories</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Premium equipment from trusted manufacturers - everything you need for complete energy solutions.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Furnaces -->
+                    <div class="premium-card rounded-xl p-6 fade-in-up">
+                        <div class="h-48 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-fire text-5xl mb-3"></i>
+                                <p class="text-lg font-semibold">Furnaces & Boilers</p>
                             </div>
                         </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Heating Systems</h3>
+                        <p class="text-gray-600 mb-4">
+                            High-efficiency furnaces and boilers from trusted brands like Brock Engineering and Clare.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Brock Engineering furnaces</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Clare furnaces & boilers (up to 87% efficiency)</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Dovre oil stoves (up to 85% efficiency)</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
+                            Get Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Water Heaters -->
+                    <div class="premium-card rounded-xl p-6 fade-in-up">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-tint text-5xl mb-3"></i>
+                                <p class="text-lg font-semibold">Water Heaters</p>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Hot Water Systems</h3>
+                        <p class="text-gray-600 mb-4">
+                            Aero high-efficiency oil-fired water heaters with exceptional recovery rates.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>32-70 gallon capacity options</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Recovery rates up to 235 gallons/hour</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Center flue and rear flue models</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
+                            Get Information <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Air Conditioners -->
+                    <div class="premium-card rounded-xl p-6 fade-in-up">
+                        <div class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-snowflake text-5xl mb-3"></i>
+                                <p class="text-lg font-semibold">Air Conditioners</p>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Cooling Systems</h3>
+                        <p class="text-gray-600 mb-4">
+                            Armstrong Air conditioning systems with industry-recognized craftsmanship and dependability.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>High-efficiency cooling technology</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Modern cabinet styling</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Cost-effective operation</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Humidifiers -->
+                    <div class="premium-card rounded-xl p-6 fade-in-up">
+                        <div class="h-48 bg-gradient-to-br from-teal-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-cloud text-5xl mb-3"></i>
+                                <p class="text-lg font-semibold">Humidifiers</p>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Humidity Control</h3>
+                        <p class="text-gray-600 mb-4">
+                            Proper humidity control reduces static electricity, protects furniture, and improves comfort.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Reduces static electricity</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Protects wood furniture & trim</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Improves comfort & health</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="text-forest font-semibold hover:text-forest-light transition-colors">
+                            Get Information <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Chevron Lubricants -->
+                    <div class="premium-card rounded-xl p-6 border-2 border-gold fade-in-up">
+                        <div class="h-48 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-oil-can text-5xl mb-3"></i>
+                                <p class="text-lg font-semibold">Chevron Lubricants</p>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Premium Lubricants</h3>
+                        <p class="text-gray-600 mb-4">
+                            Complete line of Chevron lubricants for vehicles, heavy equipment, and industrial applications.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-gold mr-2"></i>
+                                <span>Delo engine oils & gear lubricants</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-gold mr-2"></i>
+                                <span>Heavy-duty greases & transmission fluids</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-gold mr-2"></i>
+                                <span>Protect your fleet investment</span>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="text-gold font-semibold hover:text-gold-dark transition-colors">
+                            Contact Us <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Complete Solutions -->
+                    <div class="premium-card rounded-xl p-6 bg-gradient-to-br from-forest/5 to-gold/5 fade-in-up">
+                        <div class="h-48 bg-gradient-to-br from-forest to-forest-light rounded-xl flex items-center justify-center mb-6">
+                            <div class="text-center text-white">
+                                <i class="fas fa-cogs text-5xl mb-3"></i>
+                                <p class="text-lg font-semibold">Complete Solutions</p>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">One-Stop Shop</h3>
+                        <p class="text-gray-600 mb-4">
+                            Bruce Fuels can sell, install, service, and fill all your equipment needs under one roof.
+                        </p>
+                        <div class="space-y-2 mb-6">
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Sales, installation & service</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>Fuel delivery & tank rental</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <i class="fas fa-check text-forest mr-2"></i>
+                                <span>24/7 emergency support</span>
+                            </div>
+                        </div>
+                        <a href="services.html" class="text-forest font-semibold hover:text-forest-dark transition-colors">
+                            View Services <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Company Expertise -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6">Complete Energy Solutions</h2>
-                <p class="text-xl text-gray-600 mb-12 leading-relaxed">
-                    Above and beyond the obvious, Bruce Fuels can not only supply your home or business with heating oil, but we can also sell and service both heating and air conditioning equipment. Our partnership with Chevron allows us to supply only the best quality lubricants that you both expect and need for your heavy equipment and transportation fleet.
-                </p>
-                
+    <!-- Popular Chevron Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Popular Chevron Lubricants</h2>
+                    <p class="text-lg text-gray-600">
+                        Protect your vehicle fleet and equipment with quality lubrication products
+                    </p>
+                </div>
+
+                <div class="premium-card rounded-xl p-8 fade-in-up">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-6">Engine Oils & Lubricants</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center text-gray-700">
+                                    <i class="fas fa-oil-can text-gold mr-3"></i>
+                                    <span>Delo 400 & Delo 400 Multigrade</span>
+                                </div>
+                                <div class="flex items-center text-gray-700">
+                                    <i class="fas fa-oil-can text-gold mr-3"></i>
+                                    <span>Delo 400 LE</span>
+                                </div>
+                                <div class="flex items-center text-gray-700">
+                                    <i class="fas fa-oil-can text-gold mr-3"></i>
+                                    <span>Delo Gear Lubricants ESI</span>
+                                </div>
+                                <div class="flex items-center text-gray-700">
+                                    <i class="fas fa-oil-can text-gold mr-3"></i>
+                                    <span>RPM Gear Oils & Synthetic Lubricants</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-6">Transmission Fluids & Greases</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center text-gray-700">
+                                    <i class="fas fa-cog text-gold mr-3"></i>
+                                    <span>Delo Trans Fluid ESI</span>
+                                </div>
+                                <div class="flex items-center text-gray-700">
+                                    <i class="fas fa-cog text-gold mr-3"></i>
+                                    <span>RPM Synthetic Transmission Fluid</span>
+                                </div>
+                                <div class="flex items-center text-gray-700">
+                                    <i class="fas fa-cog text-gold mr-3"></i>
+                                    <span>Delo Greases EP & Dura-Lith Greases</span>
+                                </div>
+                                <div class="flex items-center text-gray-700">
+                                    <i class="fas fa-cog text-gold mr-3"></i>
+                                    <span>Ultra Duty Greases EP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <a href="contact.html" class="bg-gold hover:bg-gold-dark text-gray-900 px-8 py-3 rounded-xl font-semibold transition-all duration-300">
+                            <i class="fas fa-phone mr-2"></i>Contact for Pricing
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Bruce -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12 fade-in-up">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Bruce Fuels Products?</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Nearly a century of experience in selecting and providing the best energy equipment
+                    </p>
+                </div>
+
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-fire text-forest text-2xl"></i>
+                    <div class="text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-award text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Heating Solutions</h3>
-                        <p class="text-gray-600">Premium furnaces, boilers, and heating equipment from trusted manufacturers.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Brands</h3>
+                        <p class="text-gray-600">We only stock the best - trusted manufacturers with proven track records of reliability and performance.</p>
                     </div>
                     
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-snowflake text-gold text-2xl"></i>
+                    <div class="text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon-gold rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Cooling Systems</h3>
-                        <p class="text-gray-600">Energy-efficient air conditioning and humidity control solutions.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Installation</h3>
+                        <p class="text-gray-600">Professional installation and setup ensure your equipment operates at peak efficiency from day one.</p>
                     </div>
                     
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-forest/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-oil-can text-forest text-2xl"></i>
+                    <div class="text-center fade-in-up">
+                        <div class="w-16 h-16 feature-icon rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-white text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Quality Lubricants</h3>
-                        <p class="text-gray-600">Premium Chevron lubricants for heavy equipment and transportation fleets.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Ongoing Support</h3>
+                        <p class="text-gray-600">Complete service and maintenance support to keep your equipment running efficiently for years to come.</p>
                     </div>
                 </div>
             </div>
@@ -453,10 +483,10 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 hero-gradient text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6">Ready to Upgrade Your Equipment?</h2>
-            <p class="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+    <section class="py-16 hero-gradient text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Upgrade Your Equipment?</h2>
+            <p class="text-lg text-green-100 mb-8 max-w-2xl mx-auto">
                 Contact Bruce Fuels today for expert advice on heating, cooling, and lubrication solutions. We're here to help you find the perfect equipment for your needs.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -471,22 +501,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-4">
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Company Info -->
                 <div class="lg:col-span-2">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-10 h-10 bg-forest rounded-full flex items-center justify-center">
-                            <i class="fas fa-fire text-white"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold">Bruce Fuels</h3>
-                            <p class="text-gray-400">Premium Energy Solutions</p>
-                        </div>
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-black text-forest tracking-tight">BRUCEFUELS</h3>
+                        <p class="text-gray-400">Get Your Juice From Bruce</p>
                     </div>
                     <p class="text-gray-300 mb-6 max-w-md">
-                        Family owned since 1927, delivering premium fuel and energy solutions to Ottawa and surrounding areas. Get your juice from Bruce!
+                        Family owned since 1927, delivering premium fuel and energy solutions to Ottawa and surrounding areas.
                     </p>
                     <div class="space-y-2">
                         <p class="flex items-center text-gray-300">
@@ -520,7 +545,7 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Our Products</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Furnaces</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Furnaces & Boilers</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Water Heaters</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Air Conditioners</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Humidifiers</a></li>
@@ -529,11 +554,9 @@
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-400">
-                    © 2025 Bruce Fuels Ltd. All rights reserved. | Get your juice from Bruce! | 
-                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | 
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    © 2025 Bruce Fuels Ltd. All rights reserved. | Get your juice from Bruce!
                 </p>
             </div>
         </div>
@@ -584,17 +607,13 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
                 }
             });
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.card-hover').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        document.querySelectorAll('.fade-in-up').forEach(el => {
             observer.observe(el);
         });
     </script>
