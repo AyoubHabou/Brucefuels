@@ -77,33 +77,15 @@
             width: 100%;
         }
         
-        /* FIXED MOBILE MENU STYLES */
-        .mobile-menu {
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-            background-color: #ffffff !important;
-            z-index: 9999;
-            box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
-        }
+     .mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    background-color: white !important;
+    z-index: 9999;
+}
         
         .mobile-menu.open {
             transform: translateX(0);
-        }
-        
-        /* Mobile menu overlay for better visibility */
-        .mobile-menu-overlay {
-            position: fixed;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 9998;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .mobile-menu-overlay.active {
-            opacity: 1;
-            visibility: visible;
         }
         
         .fade-in-up {
@@ -127,9 +109,6 @@
     </style>
 </head>
 <body class="bg-gray-50">
-    
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
     
     <!-- Navigation Header -->
     <header class="glass-effect fixed w-full top-0 z-50 shadow-xl">
@@ -166,25 +145,25 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 left-0 w-80 bg-white shadow-2xl z-50">
-            <div class="p-6 bg-white h-full">
+        <div id="mobile-menu" class="mobile-menu lg:hidden fixed inset-y-0 left-0 w-64 bg-white shadow-2xl z-50" style="background-color: white;">
+            <div class="p-6">
                 <div class="flex justify-between items-center mb-8">
                     <h2 class="text-xl font-bold text-forest">Menu</h2>
-                    <button id="close-menu-btn" class="text-gray-500 hover:text-forest p-2">
+                    <button id="close-menu-btn" class="text-gray-500 hover:text-forest">
                         <i class="fas fa-times text-xl"></i>
                     </button>
                 </div>
                 <nav class="space-y-4">
-                    <a href="#home" class="block py-4 text-gray-700 hover:text-forest font-medium border-b border-gray-100 transition-colors">Home</a>
-                    <a href="corporate.html" class="block py-4 text-gray-700 hover:text-forest font-medium border-b border-gray-100 transition-colors">About Us</a>
-                    <a href="services.html" class="block py-4 text-gray-700 hover:text-forest font-medium border-b border-gray-100 transition-colors">Services</a>
-                    <a href="products.html" class="block py-4 text-gray-700 hover:text-forest font-medium border-b border-gray-100 transition-colors">Products</a>
-                    <a href="contact.html" class="block py-4 text-gray-700 hover:text-forest font-medium transition-colors">Contact</a>
+                    <a href="#home" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Home</a>
+                    <a href="corporate.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">About Us</a>
+                    <a href="services.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Services</a>
+                    <a href="products.html" class="block py-3 text-gray-700 hover:text-forest font-medium border-b border-gray-100">Products</a>
+                    <a href="contact.html" class="block py-3 text-gray-700 hover:text-forest font-medium">Contact</a>
                 </nav>
                 <div class="mt-8 p-4 bg-gray-50 rounded-xl">
                     <p class="text-sm text-gray-600 mb-2">Get Your Juice From Bruce!</p>
-                    <p class="font-semibold text-forest text-lg">613-225-6500</p>
-                    <p class="text-sm text-gray-600 break-all">reidmcdonald@brucefuels.com</p>
+                    <p class="font-semibold text-forest">613-225-6500</p>
+                    <p class="text-sm text-gray-600">reidmcdonald@brucefuels.com</p>
                 </div>
             </div>
         </div>
@@ -524,29 +503,20 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
 
-        function openMobileMenu() {
+        mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.add('open');
-            mobileMenuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
+        });
 
-        function closeMobileMenu() {
+        closeMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.remove('open');
-            mobileMenuOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // Re-enable scrolling
-        }
+        });
 
-        mobileMenuBtn.addEventListener('click', openMobileMenu);
-        closeMenuBtn.addEventListener('click', closeMobileMenu);
-
-        // Close mobile menu when clicking overlay
-        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-
-        // Close mobile menu when clicking menu links
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('open');
+            }
         });
 
         // Smooth scrolling for anchor links
@@ -560,7 +530,7 @@
                         block: 'start'
                     });
                     // Close mobile menu if open
-                    closeMobileMenu();
+                    mobileMenu.classList.remove('open');
                 }
             });
         });
@@ -598,13 +568,6 @@
         document.querySelectorAll('.fade-in-up').forEach((el, index) => {
             el.style.transitionDelay = `${index * 0.05}s`;
         });
-
-        // Handle escape key to close mobile menu
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeMobileMenu();
-            }
-        });
     </script>
 </body>
-</html>
+</html
